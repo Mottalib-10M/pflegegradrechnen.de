@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { YEAR, LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE, SITE_NAMES, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { displayDate } from '../../lib/format';
+import { PRUEFUNG } from '../../lib/pruefung';
+const lang = 'en';
+---
+<PageLayout title="About Pflegerechnung: Who Builds and Checks These Care Tools" description="Who is behind the German care grade, care allowance, respite and care home cost calculators, why they exist, how they are tested and what they never earn money from." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">About {SITE_NAMES.en}</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>{SITE_NAMES.en} is published by Radif Partners. It grew out of the question every family asks once a parent in Germany can no longer manage alone: how much money is there, and what will we have to pay ourselves? For people living abroad, or newly arrived, the German answers are scattered and full of terms nobody explains. One calculator gives a care grade after 64 questions and stops. Another site asks for a phone number before showing anything. Care home costs come as one national average that can be hundreds of euros away from what a home in your parent’s state charges.</p>
+    <h2>What this site does differently</h2>
+    <p>It takes you the whole way in one go: from the assessment points to the care grade, from the grade to the 2026 amount paid each month, to the budgets alongside it, and to the care home co-payment in a given state in the first, second, third or fourth year of residence. No calculator asks for a name, phone number or postcode, and every result is visible before you type anything.</p>
+    <h2>How we check</h2>
+    <p>The basis is the current Book XI of the Social Code on gesetze-im-internet.de and the state tables of the vdek. Before each release, automated tests recompute the {PRUEFUNG.vdekWerte} values of the vdek tables of January and July 2026 for all {PRUEFUNG.vdekRegionen - 1} states and the national average, plus every boundary of the scoring system in Annex 2 to section 15 SGB XI. If one value is off, nothing is published. The <a href={route('method', lang)}>method page</a> shows how each amount is built.</p>
+    <h2>What we are not</h2>
+    <p>We are not a Pflegekasse, not the Medical Service, not a care support centre (Pflegestützpunkt) and not care counselling under section 7a SGB XI. We place nobody in a care home, sell no live-in carers and take no commission. Free personal advice is available from your parent’s Pflegekasse and the local Pflegestützpunkt.</p>
+    <h2>Funding and your data</h2>
+    <p>The calculators are free and need no account. What you enter about health, pension or savings never leaves your browser. If the site ever carries advertising, it will not sit above a calculator or inside a result.</p>
+    <h2>In German too</h2>
+    <p>Every page also exists in German. The English pages keep the German terms you will see on letters and forms and explain them; amounts stay in euros.</p>
+    <h2>Contact</h2>
+    <p>Out-of-date figure, a decision letter that differs from the calculator, a missing case? Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. See also the <a href={route('editorial', lang)}>editorial policy</a> and the <a href={route('terms', lang)}>legal notice</a>.</p>
+    <p class="text-sm text-navy-600">Amounts for {YEAR}, read on <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, LANG_TAGS[lang])}</time>.</p>
+  </div>
+</PageLayout>

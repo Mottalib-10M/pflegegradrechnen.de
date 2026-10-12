@@ -1,0 +1,20 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { CONTACT_EMAIL, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'de';
+const description = 'Schreiben Sie uns, wenn ein Betrag veraltet ist, ein Bescheid oder eine Heimrechnung vom Rechner abweicht, ein Fall fehlt oder Sie einen Rechner einbinden möchten.';
+---
+<PageLayout title={`Kontakt zu ${SITE_NAMES[lang]}: Fehler melden, Rechner einbinden`} description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Kontakt', description, path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Kontakt' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Kontakt</h1>
+    <p>E-Mail: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Wir antworten in der Regel innerhalb einer Woche.</p>
+    <h2>Ein Bescheid oder eine Heimrechnung passt nicht zum Rechner</h2>
+    <p>Schicken Sie den Link zum Teilen aus dem Rechner und die betreffende Zeile aus Bescheid, Gutachten oder Heimrechnung, ohne Namen und Versichertennummer. Oft liegt der Unterschied an einem hauseigenen EEE, an einem Teilmonat oder an einem Modul, das im Gutachten anders bewertet wurde. Liegt er bei uns, korrigieren wir und nehmen den Fall als Test auf.</p>
+    <h2>Rechner einbinden</h2>
+    <p>Beratungsstellen, Selbsthilfegruppen und Redaktionen können die Rechner kostenlos einbinden: <a href={route('widget', lang)}>Rechner einbinden</a>.</p>
+    <h2>Was wir nicht leisten</h2>
+    <p>Keine Pflegeberatung im Einzelfall, keine Prüfung von Gutachten auf Erfolgsaussicht, keine Vermittlung von Heimplätzen oder Pflegekräften. Kostenlos beraten die Pflegeberatung Ihrer Pflegekasse und die Pflegestützpunkte.</p>
+  </div>
+</PageLayout>

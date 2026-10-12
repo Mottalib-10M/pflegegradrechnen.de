@@ -1,0 +1,32 @@
+pflegegeld
+100 k – 1 M
+pflegegrad
+10 k – 100 k
+pflegegrad rechner
+10 k – 100 k
+pflegegrad 1
+10 k – 100 k
+pflegegrad 2
+10 k – 100 k
+pflegegrad 3
+10 k – 100 k
+pflegegrad 4
+10 k – 100 k
+pflegegrad beantragen
+10 k – 100 k
+entlastungsbetrag
+10 k – 100 k
+verhinderungspflege
+10 k – 100 k
+kurzzeitpflege
+10 k – 100 k
+eigenanteil pflegeheim
+1 k – 10 k
+pflegeheim kosten
+1 k – 10 k
+pflegesachleistung
+1 k – 10 k
+pflegegeld tabelle
+1 k – 10 k
+pflegegeld 2026
+1 k – 10 k

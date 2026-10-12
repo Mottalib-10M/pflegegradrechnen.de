@@ -1,0 +1,100 @@
+---
+/**
+ * Startseite (Säule, RECETTE §5), eigene Trame: Kopfzeile mit Stand, sofort der Leistungsrechner (ohne zu
+ * scrollen sichtbar), dann der zitierbare Absatz (eingeklappt), der Weg vom Antrag zum Geld als nummerierte
+ * Etappen, die Heimkosten aller 16 Länder als Balkenliste, der Hinweis zum Reformentwurf, der Text und die FAQ.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import LeistungenRechner from './calc/LeistungenRechner';
+import MiniSim from './calc/MiniSim';
+import Clamp from './Clamp.astro';
+import { HOME } from '../content/home';
+import { route, ROUTES, type Locale } from '../i18n/routes';
+import { label } from '../i18n/nav';
+import { helpers } from '../lib/helpers';
+import { P, type SourceKey } from '../lib/engine/params';
+import { kosten, rangliste, LAND_NAME } from '../lib/engine/heim';
+import { formatMoney, displayDate } from '../lib/format';
+import { faqSchema, organizationSchema, websiteSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+import { LAST_UPDATED, LANG_TAGS } from '../data/site-config';
+import { PAGES } from '../lib/guides';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const de = lang === 'de';
+const x = HOME[lang];
+const h = helpers(lang);
+const path = route('home', lang);
+const parts = x.body(h).split(/<!--mini:([A-Za-z0-9_]+)-->/);
+const faqs = x.faqs(h);
+const keys: SourceKey[] = ['sgb11_37', 'sgb11_36', 'sgb11_38', 'sgb11_45b', 'sgb11_42a', 'sgb11_15', 'sgb11_43c', 'sgb11_30', 'vdek2607', 'bmgLeistungen', 'bmgPnogPm'];
+const sources = keys.map((k) => ({ name: P.sources[k].label[lang], url: P.sources[k].url }));
+const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(faqs, lang)];
+const $ = (n: number) => formatMoney(n, 0, lang);
+const has = (id: string) => ROUTES.some((r) => r.id === id);
+const r = (id: string) => (has(id) ? route(id, lang) : undefined);
+const etappen = de ? [
+  { id: 'pflegegrad-beantragen', t: 'Antrag', d: 'Anruf oder E-Mail an die Pflegekasse genügt; gezahlt wird ab dem Monat des Antrags.' },
+  { id: 'begutachtung-medizinischer-dienst', t: 'Begutachtung', d: '64 Kriterien in sechs Modulen, meist bei Ihnen zu Hause.' },
+  { id: 'pflegegrad-rechner', t: 'Pflegegrad', d: `Bescheid spätestens nach ${P.verfahren.entscheidung_arbeitstage} Arbeitstagen, mit Gutachten.` },
+  { id: 'widerspruch-pflegegrad', t: 'Prüfen', d: 'Zu niedrig eingestuft? Einen Monat Zeit für den Widerspruch.' },
+  { id: 'home', t: 'Leistungen', d: 'Pflegegeld, Sachleistung oder beides, dazu die Töpfe oben.' },
+] : [
+  { id: 'pflegegrad-beantragen', t: 'Apply', d: 'A call or email to the Pflegekasse is enough; payment runs from that month.' },
+  { id: 'begutachtung-medizinischer-dienst', t: 'Assessment', d: '64 criteria in six modules, usually at home.' },
+  { id: 'pflegegrad-rechner', t: 'Care grade', d: `Decision within ${P.verfahren.entscheidung_arbeitstage} working days, report included.` },
+  { id: 'widerspruch-pflegegrad', t: 'Check', d: 'Grade too low? One month to object.' },
+  { id: 'home', t: 'Benefits', d: 'Allowance, services or both, plus the budgets above.' },
+];
+const liste = rangliste();
+const max = kosten(liste[0]).mit15;
+const landSeite = (code: string) => PAGES.find((p) => p.group === 'land' && (p.toolPreset as { land?: string } | undefined)?.land === code);
+---
+<PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={faqs} sources={sources}>
+  <header class="mb-4">
+    <p class="text-sm font-semibold uppercase tracking-wide text-accent-700">{de ? 'Beträge 2026 nach SGB XI · Heimkosten nach vdek, 1. Juli 2026' : '2026 amounts under SGB XI · care home costs per vdek, 1 July 2026'}</p>
+    <h1 class="mt-1 text-3xl font-bold text-navy-900 md:text-[2.5rem] md:leading-tight">{x.h1}</h1>
+    <p class="mt-2 text-lg text-navy-700">{x.intro}</p>
+    <p class="mt-2 text-sm text-navy-700">
+      {de ? 'Nachgelesen am' : 'Checked on'} <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, LANG_TAGS[lang])}</time> · <a class="underline" href={route('method', lang)}>{label('method', lang)}</a> · <a class="underline" href={route('about', lang)}>{label('about', lang)}</a>
+    </p>
+  </header>
+  <section id="rechner" data-outil aria-label={de ? 'Leistungsrechner' : 'Benefits calculator'}>
+    <LeistungenRechner client:load lang={lang} methodHref={route('method', lang)} gradHref={r('pflegegrad-rechner')} />
+  </section>
+  <section class="mt-8" aria-labelledby="kurz">
+    <h2 id="kurz" class="sr-only">{de ? 'Das Wichtigste in Kürze' : 'In short'}</h2>
+    <Clamp text={x.resume(h)} lang={lang} id="clamp-home" sentences={2} />
+  </section>
+  <section class="mt-10 border-t border-navy-200 pt-6" aria-labelledby="weg" data-chrome>
+    <h2 id="weg" class="text-2xl font-bold text-navy-900">{de ? 'In fünf Schritten zum Geld' : 'Five steps to the money'}</h2>
+    <ol class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      {etappen.map((e, i) => (
+        <li class="rounded-lg border border-navy-200 bg-white p-4">
+          <p class="font-serif text-3xl font-bold text-accent-700">{i + 1}</p>
+          {r(e.id) && e.id !== 'home' ? <a class="mt-1 block font-semibold text-navy-900 underline" href={r(e.id)}>{e.t}</a> : <p class="mt-1 font-semibold text-navy-900">{e.t}</p>}
+          <p class="mt-1 text-sm text-navy-700">{e.d}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+  <section class="mt-10 border-t border-navy-200 pt-6" aria-labelledby="laender" data-chrome>
+    <h2 id="laender" class="text-2xl font-bold text-navy-900">{de ? 'Pflegeheim: Eigenanteil im ersten Jahr nach Bundesland' : 'Care home: co-payment in the first year by state'}</h2>
+    <p class="mt-2 text-navy-700">{de ? `vdek-Durchschnitt am 1. Juli 2026, nach dem Zuschlag von 15 %. Bund: ${$(P.heim.bund.mit15)} im Monat.` : `vdek average on 1 July 2026 after the 15% supplement. National: ${$(P.heim.bund.mit15)} a month.`}</p>
+    <ul class="mt-4 grid gap-x-8 gap-y-2 md:grid-cols-2">
+      {liste.map((l) => { const k = kosten(l); const s = landSeite(l); return (
+        <li class="grid grid-cols-[11rem_1fr_4.5rem] items-center gap-3 text-sm">
+          {s ? <a class="truncate text-navy-900 underline" href={route(s.id, lang)}>{LAND_NAME[l][lang]}</a> : <span class="truncate text-navy-900">{LAND_NAME[l][lang]}</span>}
+          <span class="land-bar block h-3 overflow-hidden rounded"><span class="block h-3" style={`width:${Math.round(k.mit15 / max * 100)}%`}></span></span>
+          <span class="tabular-nums text-right font-semibold text-navy-900">{$(k.mit15)}</span>
+        </li>); })}
+    </ul>
+    {r('pflegeheim-kosten') && <p class="mt-4"><a class="font-medium text-accent-700 underline" href={r('pflegeheim-kosten')}>{de ? 'Eigenanteil für Ihren Aufenthaltsmonat rechnen' : 'Work out the co-payment for your month of stay'}</a></p>}
+  </section>
+  <aside class="mt-10 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-navy-900" data-chrome>
+    <p class="font-semibold">{de ? 'Reformentwurf, noch nicht in Kraft' : 'Reform draft, not in force'}</p>
+    <p class="mt-1">{de ? 'Das Kabinett hat am 30. September 2026 den Entwurf des Pflegeneuordnungsgesetzes beschlossen. Bis zur Verkündung gelten die Beträge auf dieser Seite.' : 'The cabinet adopted the draft Care Reorganisation Act on 30 September 2026. Until it is published as law, the amounts on this page apply.'} {r('pflegereform-2027') && <a class="underline" href={r('pflegereform-2027')}>{de ? 'Was geplant ist' : 'What is planned'}</a>}</p>
+  </aside>
+  <div class="prose prose-slate mt-10 max-w-none border-t border-navy-200 pt-4">
+    {parts.map((p, i) => i % 2 === 0 ? <Fragment set:html={p} /> : <MiniSim client:load kind={p} lang={lang} href={r('kombinationsleistung')} />)}
+  </div>
+</PageLayout>

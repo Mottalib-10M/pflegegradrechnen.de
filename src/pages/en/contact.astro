@@ -1,0 +1,20 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { CONTACT_EMAIL, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const description = 'Write to us if an amount is out of date, a decision letter or care home bill differs from the calculator, a case is missing, or you would like to embed a calculator.';
+---
+<PageLayout title={`Contact ${SITE_NAMES[lang]}: Report an Error, Embed a Tool`} description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Contact</h1>
+    <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. We usually reply within a week, in English or German.</p>
+    <h2>A decision letter or care home bill does not match</h2>
+    <p>Send the share link from the calculator and the line from the decision, the assessment report or the home’s bill, without names or insurance numbers. The difference is often the home’s own EEE, a part month or one module scored differently in the report. If the mistake is ours, we fix it and add the case as a test.</p>
+    <h2>Embedding</h2>
+    <p>Advice services, support groups and publishers can embed the calculators free of charge: <a href={route('widget', lang)}>embed a calculator</a>.</p>
+    <h2>What we cannot do</h2>
+    <p>No individual care counselling, no assessment of whether an objection will succeed, no placement in homes or with carers. Free advice is offered by the Pflegekasse’s care counselling and the local Pflegestützpunkt.</p>
+  </div>
+</PageLayout>

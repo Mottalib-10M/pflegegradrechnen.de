@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { YEAR, LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE, SITE_NAMES, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { displayDate } from '../../lib/format';
+import { PRUEFUNG } from '../../lib/pruefung';
+const lang = 'de';
+---
+<PageLayout title="Über Pflegerechnung: wer die Pflegerechner herausgibt und prüft" description="Wer hinter den Rechnern zu Pflegegrad, Pflegegeld, Verhinderungspflege und Heimkosten steht, warum es sie gibt, wie sie geprüft werden und woran sie nicht verdienen." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Start', path: route('home', lang) }, { name: 'Über uns', path: route('about', lang) }])]} breadcrumbs={[{ label: 'Über uns' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">Über {SITE_NAMES.de}</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>{SITE_NAMES.de} wird von Radif Partners herausgegeben. Am Anfang stand eine einfache Frage, die jede Familie stellt, sobald ein Elternteil nicht mehr allein zurechtkommt: Wie viel Geld gibt es eigentlich, und was bleibt an uns hängen? Die Antworten im Netz kamen in Stücken. Ein Pflegegradrechner, der nach 64 Fragen einen Grad nennt und dann aufhört. Ein Tabellenblatt mit Pflegegeldbeträgen. Ein Ratgeber, der zuerst die Telefonnummer wissen will. Und für das Pflegeheim eine Durchschnittszahl für ganz Deutschland, die im eigenen Bundesland um mehrere hundert Euro danebenliegt.</p>
+    <h2>Was diese Seite besser machen will</h2>
+    <p>Sie führt den ganzen Weg in einem Zug: von den Punkten des Begutachtungsinstruments zum Pflegegrad, vom Pflegegrad zu dem Betrag, der 2026 jeden Monat ankommt, zu den Budgets daneben (Entlastungsbetrag, Hilfsmittel, Jahresbetrag für Verhinderungs- und Kurzzeitpflege) und, wenn es so weit ist, zum Eigenanteil im Pflegeheim des eigenen Landes im ersten, zweiten, dritten oder vierten Aufenthaltsjahr. Kein Rechner fragt nach Name, Telefon oder Postleitzahl; das Ergebnis steht da, bevor Sie etwas eingeben.</p>
+    <h2>Wie geprüft wird</h2>
+    <p>Grundlage sind das SGB XI in der aktuellen Fassung auf gesetze-im-internet.de und die Ländertabellen des Verbands der Ersatzkassen. Vor jeder Veröffentlichung rechnen automatische Tests die {PRUEFUNG.vdekWerte} Werte der beiden vdek-Tabellen von Januar und Juli 2026 für alle {PRUEFUNG.vdekRegionen - 1} Länder und den Bund nach, außerdem jede Grenze der Bewertungssystematik aus Anlage 2 zu § 15 SGB XI. Weicht ein Wert ab, wird nicht veröffentlicht. Wie jeder Betrag entsteht, steht unter <a href={route('method', lang)}>So rechnen wir</a>.</p>
+    <h2>Was wir nicht sind</h2>
+    <p>Keine Pflegekasse, kein Medizinischer Dienst, kein Pflegestützpunkt und keine Pflegeberatung im Sinne des § 7a SGB XI. Wir vermitteln keine Heimplätze, keine 24-Stunden-Kräfte und keine Pflegedienste und erhalten von niemandem Geld für eine Empfehlung. Für eine persönliche, kostenlose Beratung sind die Pflegeberatung Ihrer Pflegekasse und der Pflegestützpunkt in Ihrer Nähe da.</p>
+    <h2>Finanzierung und Ihre Daten</h2>
+    <p>Die Rechner sind kostenlos und ohne Konto. Was Sie über Gesundheit, Rente oder Ersparnisse eintippen, verlässt Ihren Browser nicht. Sollte die Seite einmal Werbung zeigen, steht sie nie über einem Rechner und nie mitten in einem Ergebnis.</p>
+    <h2>Auf Englisch</h2>
+    <p>Jede Seite gibt es auf Englisch, geschrieben für Menschen, die in Deutschland leben oder von außen einen Elternteil hier begleiten: Begriffe wie Pflegekasse, Entlastungsbetrag oder Eigenanteil werden erklärt, die Beträge bleiben in Euro.</p>
+    <h2>Kontakt</h2>
+    <p>Ein Betrag stimmt nicht mehr, ein Bescheid weicht vom Rechner ab, ein Fall fehlt? Schreiben Sie an <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Siehe auch die <a href={route('editorial', lang)}>Redaktionsgrundsätze</a> und das <a href={route('terms', lang)}>Impressum</a>.</p>
+    <p class="text-sm text-navy-600">Beträge {YEAR}, nachgelesen am <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, LANG_TAGS[lang])}</time>.</p>
+  </div>
+</PageLayout>

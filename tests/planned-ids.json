@@ -1,0 +1,560 @@
+[
+ {
+  "id": "pflegegrad-rechner",
+  "dir": "rechner",
+  "group": "grad",
+  "order": 10,
+  "tool": "pflegegrad",
+  "slug_de": "pflegegrad-rechner",
+  "slug_en": "care-grade-calculator",
+  "kp": "pflegegrad rechner 10k-100k"
+ },
+ {
+  "id": "pflegegrad-1",
+  "dir": "guides",
+  "group": "grad",
+  "order": 20,
+  "mini": "grad1",
+  "slug_de": "pflegegrad-1",
+  "slug_en": "care-grade-1",
+  "kp": "pflegegrad 1 10k-100k"
+ },
+ {
+  "id": "pflegegrad-2",
+  "dir": "guides",
+  "group": "grad",
+  "order": 30,
+  "mini": "gradGeld",
+  "slug_de": "pflegegrad-2",
+  "slug_en": "care-grade-2",
+  "kp": "pflegegrad 2 10k-100k"
+ },
+ {
+  "id": "pflegegrad-3",
+  "dir": "guides",
+  "group": "grad",
+  "order": 40,
+  "mini": "gradGeld",
+  "slug_de": "pflegegrad-3",
+  "slug_en": "care-grade-3",
+  "kp": "pflegegrad 3 10k-100k"
+ },
+ {
+  "id": "pflegegrad-4",
+  "dir": "guides",
+  "group": "grad",
+  "order": 50,
+  "mini": "gradGeld",
+  "slug_de": "pflegegrad-4",
+  "slug_en": "care-grade-4",
+  "kp": "pflegegrad 4 10k-100k"
+ },
+ {
+  "id": "pflegegrad-5",
+  "dir": "guides",
+  "group": "grad",
+  "order": 60,
+  "mini": "gradGeld",
+  "slug_de": "pflegegrad-5",
+  "slug_en": "care-grade-5",
+  "kp": "(non mesuré)"
+ },
+ {
+  "id": "pflegegrad-beantragen",
+  "dir": "guides",
+  "group": "grad",
+  "order": 70,
+  "mini": "antragMonat",
+  "slug_de": "pflegegrad-beantragen",
+  "slug_en": "applying-for-a-care-grade",
+  "kp": "pflegegrad beantragen 10k-100k"
+ },
+ {
+  "id": "begutachtung-medizinischer-dienst",
+  "dir": "guides",
+  "group": "grad",
+  "order": 80,
+  "mini": "modulGewicht",
+  "slug_de": "begutachtung-medizinischer-dienst",
+  "slug_en": "medical-service-assessment",
+  "kp": ""
+ },
+ {
+  "id": "widerspruch-pflegegrad",
+  "dir": "guides",
+  "group": "grad",
+  "order": 90,
+  "mini": "widerspruchWert",
+  "slug_de": "widerspruch-pflegegrad",
+  "slug_en": "objecting-to-a-care-grade",
+  "kp": "widerspruch pflegegrad"
+ },
+ {
+  "id": "hoeherstufung-pflegegrad",
+  "dir": "guides",
+  "group": "grad",
+  "order": 100,
+  "mini": "hoeherstufung",
+  "slug_de": "hoeherstufung-pflegegrad",
+  "slug_en": "higher-care-grade",
+  "kp": ""
+ },
+ {
+  "id": "pflegegrad-demenz",
+  "dir": "guides",
+  "group": "grad",
+  "order": 110,
+  "mini": "modul23",
+  "slug_de": "pflegegrad-demenz",
+  "slug_en": "care-grade-dementia",
+  "kp": ""
+ },
+ {
+  "id": "pflegegrad-kinder",
+  "dir": "guides",
+  "group": "grad",
+  "order": 120,
+  "mini": "kind18",
+  "slug_de": "pflegegrad-kinder",
+  "slug_en": "care-grade-children",
+  "kp": ""
+ },
+ {
+  "id": "pflegegeld",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 10,
+  "mini": "pflegegeldTage",
+  "slug_de": "pflegegeld",
+  "slug_en": "care-allowance",
+  "kp": "pflegegeld 100k-1M, pflegegeld tabelle, pflegegeld 2026"
+ },
+ {
+  "id": "pflegesachleistung",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 20,
+  "mini": "sachRest",
+  "slug_de": "pflegesachleistung",
+  "slug_en": "home-care-services",
+  "kp": "pflegesachleistung 1k-10k"
+ },
+ {
+  "id": "kombinationsleistung",
+  "dir": "rechner",
+  "group": "zuhause",
+  "order": 30,
+  "tool": "kombi",
+  "slug_de": "kombinationsleistung",
+  "slug_en": "combined-benefit",
+  "kp": "kombinationsleistung"
+ },
+ {
+  "id": "entlastungsbetrag",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 40,
+  "mini": "entlastungRest",
+  "slug_de": "entlastungsbetrag",
+  "slug_en": "relief-amount",
+  "kp": "entlastungsbetrag 10k-100k"
+ },
+ {
+  "id": "verhinderungspflege",
+  "dir": "rechner",
+  "group": "zuhause",
+  "order": 50,
+  "tool": "jahresbetrag",
+  "slug_de": "verhinderungspflege",
+  "slug_en": "respite-care",
+  "kp": "verhinderungspflege 10k-100k"
+ },
+ {
+  "id": "kurzzeitpflege",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 60,
+  "mini": "kurzzeitTage",
+  "slug_de": "kurzzeitpflege",
+  "slug_en": "short-term-care",
+  "kp": "kurzzeitpflege 10k-100k"
+ },
+ {
+  "id": "tagespflege",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 70,
+  "mini": "tagespflege",
+  "slug_de": "tagespflege",
+  "slug_en": "day-care",
+  "kp": ""
+ },
+ {
+  "id": "pflegehilfsmittel",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 80,
+  "mini": "hilfsmittel",
+  "slug_de": "pflegehilfsmittel",
+  "slug_en": "care-aids",
+  "kp": ""
+ },
+ {
+  "id": "wohnumfeldverbesserung",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 90,
+  "mini": "wohnumfeld",
+  "slug_de": "wohnumfeldverbesserung",
+  "slug_en": "home-adaptation-grant",
+  "kp": ""
+ },
+ {
+  "id": "wohngruppenzuschlag",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 100,
+  "mini": "wohngruppe",
+  "slug_de": "wohngruppenzuschlag",
+  "slug_en": "shared-flat-supplement",
+  "kp": ""
+ },
+ {
+  "id": "beratungseinsatz",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 110,
+  "mini": "beratung",
+  "slug_de": "beratungseinsatz",
+  "slug_en": "home-advice-visit",
+  "kp": ""
+ },
+ {
+  "id": "umwandlungsanspruch",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 120,
+  "mini": "umwandlung",
+  "slug_de": "umwandlungsanspruch",
+  "slug_en": "conversion-claim",
+  "kp": ""
+ },
+ {
+  "id": "digitale-pflegeanwendungen",
+  "dir": "guides",
+  "group": "zuhause",
+  "order": 130,
+  "mini": "dipa",
+  "slug_de": "digitale-pflegeanwendungen",
+  "slug_en": "digital-care-apps",
+  "kp": ""
+ },
+ {
+  "id": "pflegeheim-kosten",
+  "dir": "rechner",
+  "group": "heim",
+  "order": 10,
+  "tool": "heim",
+  "slug_de": "pflegeheim-kosten",
+  "slug_en": "care-home-costs",
+  "kp": "pflegeheim kosten 1k-10k"
+ },
+ {
+  "id": "eigenanteil-pflegeheim",
+  "dir": "guides",
+  "group": "heim",
+  "order": 20,
+  "mini": "eeeZuschlag",
+  "slug_de": "eigenanteil-pflegeheim",
+  "slug_en": "care-home-co-payment",
+  "kp": "eigenanteil pflegeheim 1k-10k"
+ },
+ {
+  "id": "leistungszuschlag",
+  "dir": "guides",
+  "group": "heim",
+  "order": 30,
+  "mini": "zuschlagVerlauf",
+  "slug_de": "leistungszuschlag",
+  "slug_en": "care-home-supplement",
+  "kp": ""
+ },
+ {
+  "id": "investitionskosten",
+  "dir": "guides",
+  "group": "heim",
+  "order": 40,
+  "mini": "investLand",
+  "slug_de": "investitionskosten",
+  "slug_en": "investment-costs",
+  "kp": ""
+ },
+ {
+  "id": "hilfe-zur-pflege",
+  "dir": "guides",
+  "group": "heim",
+  "order": 50,
+  "mini": "reichweite",
+  "slug_de": "hilfe-zur-pflege",
+  "slug_en": "social-assistance-for-care",
+  "kp": "hilfe zur pflege"
+ },
+ {
+  "id": "pflegeheim-kosten-wer-zahlt",
+  "dir": "guides",
+  "group": "heim",
+  "order": 60,
+  "mini": "elternunterhalt",
+  "slug_de": "pflegeheim-kosten-wer-zahlt",
+  "slug_en": "who-pays-for-a-care-home",
+  "kp": "pflegeheim kosten wer zahlt"
+ },
+ {
+  "id": "rente-pflegende-angehoerige",
+  "dir": "rechner",
+  "group": "angehoerige",
+  "order": 10,
+  "tool": "rente",
+  "slug_de": "rente-pflegende-angehoerige",
+  "slug_en": "pension-for-family-carers",
+  "kp": ""
+ },
+ {
+  "id": "pflege-pauschbetrag",
+  "dir": "guides",
+  "group": "angehoerige",
+  "order": 20,
+  "mini": "pauschbetrag",
+  "slug_de": "pflege-pauschbetrag",
+  "slug_en": "carers-tax-lump-sum",
+  "kp": ""
+ },
+ {
+  "id": "pflegezeit",
+  "dir": "guides",
+  "group": "angehoerige",
+  "order": 30,
+  "mini": "pflegezeit",
+  "slug_de": "pflegezeit",
+  "slug_en": "carers-leave",
+  "kp": ""
+ },
+ {
+  "id": "pflegereform-2027",
+  "dir": "guides",
+  "group": "angehoerige",
+  "order": 40,
+  "mini": "heuteRecht",
+  "slug_de": "pflegereform",
+  "slug_en": "care-reform",
+  "kp": "(slug sans année)"
+ },
+ {
+  "id": "pflegeheim-kosten-baden-wuerttemberg",
+  "dir": "laender",
+  "group": "land",
+  "order": 10,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "BW"
+  },
+  "slug_de": "pflegeheim-kosten-baden-wuerttemberg",
+  "slug_en": "care-home-costs-baden-wuerttemberg",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-bayern",
+  "dir": "laender",
+  "group": "land",
+  "order": 20,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "BY"
+  },
+  "slug_de": "pflegeheim-kosten-bayern",
+  "slug_en": "care-home-costs-bavaria",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-berlin",
+  "dir": "laender",
+  "group": "land",
+  "order": 30,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "BE"
+  },
+  "slug_de": "pflegeheim-kosten-berlin",
+  "slug_en": "care-home-costs-berlin",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-brandenburg",
+  "dir": "laender",
+  "group": "land",
+  "order": 40,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "BB"
+  },
+  "slug_de": "pflegeheim-kosten-brandenburg",
+  "slug_en": "care-home-costs-brandenburg",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-bremen",
+  "dir": "laender",
+  "group": "land",
+  "order": 50,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "HB"
+  },
+  "slug_de": "pflegeheim-kosten-bremen",
+  "slug_en": "care-home-costs-bremen",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-hamburg",
+  "dir": "laender",
+  "group": "land",
+  "order": 60,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "HH"
+  },
+  "slug_de": "pflegeheim-kosten-hamburg",
+  "slug_en": "care-home-costs-hamburg",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-hessen",
+  "dir": "laender",
+  "group": "land",
+  "order": 70,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "HE"
+  },
+  "slug_de": "pflegeheim-kosten-hessen",
+  "slug_en": "care-home-costs-hesse",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-mecklenburg-vorpommern",
+  "dir": "laender",
+  "group": "land",
+  "order": 80,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "MV"
+  },
+  "slug_de": "pflegeheim-kosten-mecklenburg-vorpommern",
+  "slug_en": "care-home-costs-mecklenburg-western-pomerania",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-niedersachsen",
+  "dir": "laender",
+  "group": "land",
+  "order": 90,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "NI"
+  },
+  "slug_de": "pflegeheim-kosten-niedersachsen",
+  "slug_en": "care-home-costs-lower-saxony",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-nordrhein-westfalen",
+  "dir": "laender",
+  "group": "land",
+  "order": 100,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "NW"
+  },
+  "slug_de": "pflegeheim-kosten-nordrhein-westfalen",
+  "slug_en": "care-home-costs-north-rhine-westphalia",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-rheinland-pfalz",
+  "dir": "laender",
+  "group": "land",
+  "order": 110,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "RP"
+  },
+  "slug_de": "pflegeheim-kosten-rheinland-pfalz",
+  "slug_en": "care-home-costs-rhineland-palatinate",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-saarland",
+  "dir": "laender",
+  "group": "land",
+  "order": 120,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "SL"
+  },
+  "slug_de": "pflegeheim-kosten-saarland",
+  "slug_en": "care-home-costs-saarland",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-sachsen",
+  "dir": "laender",
+  "group": "land",
+  "order": 130,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "SN"
+  },
+  "slug_de": "pflegeheim-kosten-sachsen",
+  "slug_en": "care-home-costs-saxony",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-sachsen-anhalt",
+  "dir": "laender",
+  "group": "land",
+  "order": 140,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "ST"
+  },
+  "slug_de": "pflegeheim-kosten-sachsen-anhalt",
+  "slug_en": "care-home-costs-saxony-anhalt",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-schleswig-holstein",
+  "dir": "laender",
+  "group": "land",
+  "order": 150,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "SH"
+  },
+  "slug_de": "pflegeheim-kosten-schleswig-holstein",
+  "slug_en": "care-home-costs-schleswig-holstein",
+  "kp": "pflegeheim kosten <land>"
+ },
+ {
+  "id": "pflegeheim-kosten-thueringen",
+  "dir": "laender",
+  "group": "land",
+  "order": 160,
+  "tool": "heim",
+  "toolPreset": {
+   "land": "TH"
+  },
+  "slug_de": "pflegeheim-kosten-thueringen",
+  "slug_en": "care-home-costs-thuringia",
+  "kp": "pflegeheim kosten <land>"
+ }
+]

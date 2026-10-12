@@ -1,0 +1,952 @@
+{
+  "_lisezmoi": "Alle Rechtswerte der Seite. Jeder Block nennt seine Quelle (_quelle) und wurde am retrieved_at an ihr gelesen. Nie eine Zahl fest in Seiten oder Code schreiben (RECETTE §4, §17.4 Punkt 7).",
+  "year": 2026,
+  "retrieved_at": "2026-10-12",
+  "valid_from": "2026-01-01",
+  "valid_to": "2026-12-31",
+  "sgb11_stand": "zuletzt geändert durch Art. 2c G v. 24.7.2026 (BGBl. 2026 I Nr. 228)",
+  "pflegegeld": {
+    "_quelle": "§ 37 Abs. 1 SGB XI, Beträge seit 1.1.2025 (Bek. v. 14.11.2024, BAnz AT 12.12.2024 B7)",
+    "2": 347,
+    "3": 599,
+    "4": 800,
+    "5": 990
+  },
+  "sachleistung": {
+    "_quelle": "§ 36 Abs. 3 SGB XI",
+    "2": 796,
+    "3": 1497,
+    "4": 1859,
+    "5": 2299
+  },
+  "tagespflege": {
+    "_quelle": "§ 41 Abs. 2 SGB XI",
+    "2": 721,
+    "3": 1357,
+    "4": 1685,
+    "5": 2085
+  },
+  "vollstationaer": {
+    "_quelle": "§ 43 Abs. 2 SGB XI; Pflegegrad 1: Zuschuss § 43 Abs. 3",
+    "1": 131,
+    "2": 805,
+    "3": 1319,
+    "4": 1855,
+    "5": 2096
+  },
+  "entlastungsbetrag": {
+    "_quelle": "§ 45b SGB XI",
+    "monat": 131,
+    "uebertrag_bis": "30.06."
+  },
+  "jahresbetrag": {
+    "_quelle": "§ 42a SGB XI (Gemeinsamer Jahresbetrag seit 1.7.2025), §§ 39, 42",
+    "euro": 3539,
+    "wochen_verhinderung": 8,
+    "wochen_kurzzeit": 8,
+    "angehoerige_pflegegeld_monate": 2,
+    "pflegegeld_fortzahlung_anteil": 0.5,
+    "antragsfrist": "Ende des Folgejahres"
+  },
+  "pflegehilfsmittel": {
+    "_quelle": "§ 40 Abs. 2 und 3 SGB XI",
+    "verbrauch_monat": 42,
+    "zuzahlung_anteil": 0.1,
+    "zuzahlung_max": 25,
+    "entscheidung_wochen": 3,
+    "entscheidung_wochen_mit_gutachten": 5
+  },
+  "wohnumfeld": {
+    "_quelle": "§ 40 Abs. 4 SGB XI",
+    "je_massnahme": 4180,
+    "max_gemeinsam": 16720,
+    "max_personen": 4
+  },
+  "wohngruppe": {
+    "_quelle": "§ 45f SGB XI",
+    "zuschlag": 224,
+    "min_mitbewohner": 2,
+    "max_mitbewohner": 11,
+    "min_pflegebeduerftige_mitbewohner": 2
+  },
+  "dipa": {
+    "_quelle": "§ 40b Abs. 1 SGB XI",
+    "anwendung": 40,
+    "unterstuetzung": 30
+  },
+  "umwandlung": {
+    "_quelle": "§ 45a Abs. 4 SGB XI",
+    "anteil_max": 0.4
+  },
+  "kombination": {
+    "_quelle": "§ 38 SGB XI",
+    "bindung_monate": 6
+  },
+  "beratung": {
+    "_quelle": "§ 37 Abs. 3 SGB XI",
+    "pg23_monate": 6,
+    "pg45_monate": 3,
+    "video_bis": "2027-03-31"
+  },
+  "verfahren": {
+    "_quelle": "§ 18c Abs. 1 SGB XI",
+    "entscheidung_arbeitstage": 25
+  },
+  "nba": {
+    "_quelle": "§ 15 SGB XI mit Anlage 1 (Einzelpunkte) und Anlage 2 (Bewertungssystematik)",
+    "schwellen": [
+      12.5,
+      27,
+      47.5,
+      70,
+      90
+    ],
+    "gewichtung": {
+      "m1": 0.1,
+      "m23": 0.15,
+      "m4": 0.4,
+      "m5": 0.2,
+      "m6": 0.15
+    },
+    "bereiche": {
+      "m1": {
+        "grenzen": [
+          2,
+          4,
+          6,
+          10
+        ],
+        "gewichtet": [
+          0,
+          2.5,
+          5,
+          7.5,
+          10
+        ],
+        "max": 15
+      },
+      "m2": {
+        "grenzen": [
+          2,
+          6,
+          11,
+          17
+        ],
+        "gewichtet": [
+          0,
+          3.75,
+          7.5,
+          11.25,
+          15
+        ],
+        "max": 33
+      },
+      "m3": {
+        "grenzen": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "gewichtet": [
+          0,
+          3.75,
+          7.5,
+          11.25,
+          15
+        ],
+        "max": 65
+      },
+      "m4": {
+        "grenzen": [
+          3,
+          8,
+          19,
+          37
+        ],
+        "gewichtet": [
+          0,
+          10,
+          20,
+          30,
+          40
+        ],
+        "max": 54
+      },
+      "m5": {
+        "grenzen": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "gewichtet": [
+          0,
+          5,
+          10,
+          15,
+          20
+        ],
+        "max": 15
+      },
+      "m6": {
+        "grenzen": [
+          1,
+          4,
+          7,
+          12
+        ],
+        "gewichtet": [
+          0,
+          3.75,
+          7.5,
+          11.25,
+          15
+        ],
+        "max": 18
+      }
+    },
+    "m4_gewicht": {
+      "4.8": 3,
+      "4.9": 2,
+      "4.10": 2
+    },
+    "m4_sonde": {
+      "entfaellt": 0,
+      "teilweise": 6,
+      "vollstaendig": 3
+    },
+    "m4_kind_unter_18_monate": 20,
+    "m5_a_tag": [
+      1,
+      3,
+      8
+    ],
+    "m5_b_tag": [
+      0.142857142857,
+      1,
+      3
+    ],
+    "m5_c": {
+      "woechentlich_faktor": {
+        "5.12": 8.6,
+        "5.13": 4.3,
+        "5.14": 4.3,
+        "5.15": 8.6
+      },
+      "monatlich_faktor": {
+        "5.12": 2,
+        "5.13": 1,
+        "5.14": 1,
+        "5.15": 2
+      },
+      "taeglich_5_12": 60,
+      "stufen": [
+        4.3,
+        8.6,
+        12.9,
+        60
+      ],
+      "punkte": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    "kinder_18_monate_stufen": [
+      12.5,
+      27,
+      47.5,
+      70
+    ]
+  },
+  "zuschlag": {
+    "_quelle": "§ 43c SGB XI",
+    "stufen": [
+      0.15,
+      0.3,
+      0.5,
+      0.75
+    ],
+    "ab_monat": [
+      1,
+      13,
+      25,
+      37
+    ]
+  },
+  "heim": {
+    "_quelle": "vdek, Finanzielle Belastung einer/eines Pflegebedürftigen im Pflegeheim, Bund und Bundesländer, 1. Juli 2026 (PM vom 14.07.2026) und 1. Januar 2026 (PM vom 22.01.2026); EEE inkl. Ausbildungskosten",
+    "stand": "2026-07-01",
+    "stand_vorher": "2026-01-01",
+    "bund": {
+      "eee": 2088,
+      "ausbildung": 150,
+      "uv": 1068,
+      "invest": 521,
+      "mit15": 3364
+    },
+    "bund_vorher": {
+      "eee": 1982,
+      "ausbildung": 146,
+      "uv": 1046,
+      "invest": 514,
+      "mit15": 3245
+    },
+    "bund_vorjahr": {
+      "stand": "2025-07-01",
+      "mit15": 3108,
+      "uv": 1018,
+      "invest": 507,
+      "ausbildung_nach_zuschlag": 114,
+      "eee_nach_zuschlag": 1583
+    },
+    "laender": {
+      "BW": {
+        "eee": 2401,
+        "ausbildung": 164,
+        "uv": 1153,
+        "invest": 463,
+        "mit15": 3657
+      },
+      "BY": {
+        "eee": 2185,
+        "ausbildung": 123,
+        "uv": 979,
+        "invest": 434,
+        "mit15": 3270
+      },
+      "BE": {
+        "eee": 2410,
+        "ausbildung": 239,
+        "uv": 870,
+        "invest": 469,
+        "mit15": 3388
+      },
+      "BB": {
+        "eee": 2172,
+        "ausbildung": 129,
+        "uv": 972,
+        "invest": 332,
+        "mit15": 3150
+      },
+      "HB": {
+        "eee": 2296,
+        "ausbildung": 179,
+        "uv": 1179,
+        "invest": 630,
+        "mit15": 3761
+      },
+      "HH": {
+        "eee": 2159,
+        "ausbildung": 229,
+        "uv": 1074,
+        "invest": 572,
+        "mit15": 3481
+      },
+      "HE": {
+        "eee": 2233,
+        "ausbildung": 174,
+        "uv": 1005,
+        "invest": 528,
+        "mit15": 3431
+      },
+      "MV": {
+        "eee": 2070,
+        "ausbildung": 148,
+        "uv": 901,
+        "invest": 371,
+        "mit15": 3032
+      },
+      "NI": {
+        "eee": 1862,
+        "ausbildung": 136,
+        "uv": 857,
+        "invest": 568,
+        "mit15": 3008
+      },
+      "NW": {
+        "eee": 1983,
+        "ausbildung": 173,
+        "uv": 1331,
+        "invest": 654,
+        "mit15": 3671
+      },
+      "RP": {
+        "eee": 1766,
+        "ausbildung": 145,
+        "uv": 1280,
+        "invest": 508,
+        "mit15": 3289
+      },
+      "SL": {
+        "eee": 2176,
+        "ausbildung": 254,
+        "uv": 1271,
+        "invest": 574,
+        "mit15": 3695
+      },
+      "SN": {
+        "eee": 2136,
+        "ausbildung": 135,
+        "uv": 881,
+        "invest": 455,
+        "mit15": 3152
+      },
+      "ST": {
+        "eee": 1993,
+        "ausbildung": 104,
+        "uv": 852,
+        "invest": 345,
+        "mit15": 2891
+      },
+      "SH": {
+        "eee": 1782,
+        "ausbildung": 76,
+        "uv": 1060,
+        "invest": 573,
+        "mit15": 3148
+      },
+      "TH": {
+        "eee": 2045,
+        "ausbildung": 122,
+        "uv": 971,
+        "invest": 454,
+        "mit15": 3163
+      }
+    },
+    "laender_vorher": {
+      "BW": {
+        "eee": 2287,
+        "ausbildung": 164,
+        "uv": 1127,
+        "invest": 461,
+        "mit15": 3532
+      },
+      "BY": {
+        "eee": 2115,
+        "ausbildung": 119,
+        "uv": 965,
+        "invest": 433,
+        "mit15": 3196
+      },
+      "BE": {
+        "eee": 2252,
+        "ausbildung": 209,
+        "uv": 847,
+        "invest": 466,
+        "mit15": 3227
+      },
+      "BB": {
+        "eee": 2065,
+        "ausbildung": 126,
+        "uv": 944,
+        "invest": 318,
+        "mit15": 3017
+      },
+      "HB": {
+        "eee": 2211,
+        "ausbildung": 179,
+        "uv": 1151,
+        "invest": 607,
+        "mit15": 3637
+      },
+      "HH": {
+        "eee": 1973,
+        "ausbildung": 229,
+        "uv": 1036,
+        "invest": 571,
+        "mit15": 3284
+      },
+      "HE": {
+        "eee": 2030,
+        "ausbildung": 161,
+        "uv": 978,
+        "invest": 525,
+        "mit15": 3229
+      },
+      "MV": {
+        "eee": 1948,
+        "ausbildung": 150,
+        "uv": 879,
+        "invest": 368,
+        "mit15": 2903
+      },
+      "NI": {
+        "eee": 1765,
+        "ausbildung": 124,
+        "uv": 844,
+        "invest": 559,
+        "mit15": 2903
+      },
+      "NW": {
+        "eee": 1916,
+        "ausbildung": 173,
+        "uv": 1307,
+        "invest": 646,
+        "mit15": 3582
+      },
+      "RP": {
+        "eee": 1704,
+        "ausbildung": 145,
+        "uv": 1268,
+        "invest": 506,
+        "mit15": 3222
+      },
+      "SL": {
+        "eee": 2128,
+        "ausbildung": 254,
+        "uv": 1259,
+        "invest": 533,
+        "mit15": 3601
+      },
+      "SN": {
+        "eee": 1981,
+        "ausbildung": 136,
+        "uv": 850,
+        "invest": 452,
+        "mit15": 2986
+      },
+      "ST": {
+        "eee": 1838,
+        "ausbildung": 105,
+        "uv": 823,
+        "invest": 335,
+        "mit15": 2720
+      },
+      "SH": {
+        "eee": 1696,
+        "ausbildung": 74,
+        "uv": 1036,
+        "invest": 559,
+        "mit15": 3037
+      },
+      "TH": {
+        "eee": 1900,
+        "ausbildung": 123,
+        "uv": 938,
+        "invest": 452,
+        "mit15": 3005
+      }
+    }
+  },
+  "landespflegegeld_by": {
+    "_quelle": "Bayerisches Landesamt für Pflege, Landespflegegeld (gelesen 2026-10-12)",
+    "euro_jahr": 500,
+    "ab_pflegegrad": 2,
+    "auszahlung_bis": "31.01. des Folgejahres",
+    "vorher_euro_jahr": 1000
+  },
+  "rente": {
+    "_quelle": "§ 44 SGB XI, § 166 Abs. 2 SGB VI; Bezugsgröße und vorläufiges Durchschnittsentgelt 2026 (SV-Rechengrößenverordnung 2026, DRV); Rentenwert ab 1.7.2026 (DRV)",
+    "bezugsgroesse_monat": 3955,
+    "durchschnittsentgelt": 51944,
+    "rentenwert": 42.52,
+    "rentenwert_vorher": 40.79,
+    "rentenwert_ab": "2026-07-01",
+    "min_stunden_woche": 10,
+    "min_tage_woche": 2,
+    "max_erwerb_stunden": 30,
+    "anteil": {
+      "2": {
+        "geld": 0.27,
+        "kombi": 0.2295,
+        "sach": 0.189
+      },
+      "3": {
+        "geld": 0.43,
+        "kombi": 0.3655,
+        "sach": 0.301
+      },
+      "4": {
+        "geld": 0.7,
+        "kombi": 0.595,
+        "sach": 0.49
+      },
+      "5": {
+        "geld": 1.0,
+        "kombi": 0.85,
+        "sach": 0.7
+      }
+    }
+  },
+  "pauschbetrag": {
+    "_quelle": "§ 33b Abs. 6 EStG",
+    "2": 600,
+    "3": 1100,
+    "4": 1800,
+    "5": 1800
+  },
+  "pflegezeit": {
+    "_quelle": "§ 44a Abs. 3 SGB XI; §§ 2, 3 PflegeZG; § 2 FPfZG",
+    "unterstuetzungsgeld_tage": 10,
+    "pflegezeit_monate": 6,
+    "pflegezeit_ab_beschaeftigte": 15,
+    "familienpflegezeit_monate": 24,
+    "familienpflegezeit_min_stunden": 15,
+    "familienpflegezeit_ab_beschaeftigte": 25
+  },
+  "sozialhilfe": {
+    "_quelle": "§§ 61, 85, 90, 94 SGB XII; § 1 DV § 90 Abs. 2 Nr. 9 SGB XII",
+    "jahreseinkommensgrenze_kinder": 100000,
+    "schonvermoegen": 10000,
+    "schonvermoegen_unterhaltene": 500
+  },
+  "reform": {
+    "_quelle": "BMG, Pressemitteilung „Kabinett beschließt Pflegeneuordnungsgesetz“ (30.09.2026)",
+    "kabinett": "2026-09-30",
+    "sozialraumbudget_u25_monat": 300,
+    "kinderlosenzuschlag_2027": 0.009,
+    "status": "Regierungsentwurf, nicht in Kraft"
+  },
+  "statistik": {
+    "_quelle": "BMG, Zahlen und Fakten zur Pflegeversicherung; Destatis Pflegestatistik 2023",
+    "pflegebeduerftige_2023": 5.7
+  },
+  "sources": {
+    "sgb11_15": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__15.html",
+      "label": {
+        "de": "§ 15 SGB XI: Ermittlung des Pflegegrades, Begutachtungsinstrument",
+        "en": "Section 15 SGB XI: determining the care grade, assessment instrument"
+      }
+    },
+    "sgb11_anlage1": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/anlage_1.html",
+      "label": {
+        "de": "Anlage 1 zu § 15 SGB XI: Einzelpunkte der Module 1 bis 6",
+        "en": "Annex 1 to Section 15 SGB XI: item points of modules 1 to 6"
+      }
+    },
+    "sgb11_anlage2": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/anlage_2.html",
+      "label": {
+        "de": "Anlage 2 zu § 15 SGB XI: Bewertungssystematik",
+        "en": "Annex 2 to Section 15 SGB XI: scoring system"
+      }
+    },
+    "sgb11_18": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__18.html",
+      "label": {
+        "de": "§ 18 SGB XI: Beauftragung der Begutachtung",
+        "en": "Section 18 SGB XI: commissioning the assessment"
+      }
+    },
+    "sgb11_18a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__18a.html",
+      "label": {
+        "de": "§ 18a SGB XI: Begutachtungsverfahren",
+        "en": "Section 18a SGB XI: assessment procedure"
+      }
+    },
+    "sgb11_18c": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__18c.html",
+      "label": {
+        "de": "§ 18c SGB XI: Entscheidung über den Antrag, Fristen",
+        "en": "Section 18c SGB XI: decision on the application, deadlines"
+      }
+    },
+    "sgb11_28a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__28a.html",
+      "label": {
+        "de": "§ 28a SGB XI: Leistungen bei Pflegegrad 1",
+        "en": "Section 28a SGB XI: benefits at care grade 1"
+      }
+    },
+    "sgb11_30": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__30.html",
+      "label": {
+        "de": "§ 30 SGB XI: Dynamisierung (nächste Anpassung 1.1.2028)",
+        "en": "Section 30 SGB XI: indexation (next increase 1 January 2028)"
+      }
+    },
+    "sgb11_36": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__36.html",
+      "label": {
+        "de": "§ 36 SGB XI: Pflegesachleistung",
+        "en": "Section 36 SGB XI: home care services in kind"
+      }
+    },
+    "sgb11_37": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__37.html",
+      "label": {
+        "de": "§ 37 SGB XI: Pflegegeld für selbst beschaffte Pflegehilfen",
+        "en": "Section 37 SGB XI: care allowance (Pflegegeld)"
+      }
+    },
+    "sgb11_38": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__38.html",
+      "label": {
+        "de": "§ 38 SGB XI: Kombinationsleistung",
+        "en": "Section 38 SGB XI: combined benefit"
+      }
+    },
+    "sgb11_39": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__39.html",
+      "label": {
+        "de": "§ 39 SGB XI: Verhinderungspflege",
+        "en": "Section 39 SGB XI: respite care (Verhinderungspflege)"
+      }
+    },
+    "sgb11_40": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__40.html",
+      "label": {
+        "de": "§ 40 SGB XI: Pflegehilfsmittel und wohnumfeldverbessernde Maßnahmen",
+        "en": "Section 40 SGB XI: care aids and home adaptations"
+      }
+    },
+    "sgb11_40b": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__40b.html",
+      "label": {
+        "de": "§ 40b SGB XI: Leistungsanspruch bei digitalen Pflegeanwendungen",
+        "en": "Section 40b SGB XI: digital care applications (DiPA)"
+      }
+    },
+    "sgb11_41": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__41.html",
+      "label": {
+        "de": "§ 41 SGB XI: Tagespflege und Nachtpflege",
+        "en": "Section 41 SGB XI: day and night care"
+      }
+    },
+    "sgb11_42": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__42.html",
+      "label": {
+        "de": "§ 42 SGB XI: Kurzzeitpflege",
+        "en": "Section 42 SGB XI: short-term care"
+      }
+    },
+    "sgb11_42a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__42a.html",
+      "label": {
+        "de": "§ 42a SGB XI: Gemeinsamer Jahresbetrag (3.539 €)",
+        "en": "Section 42a SGB XI: joint annual amount (€3,539)"
+      }
+    },
+    "sgb11_43": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__43.html",
+      "label": {
+        "de": "§ 43 SGB XI: vollstationäre Pflege",
+        "en": "Section 43 SGB XI: full residential care"
+      }
+    },
+    "sgb11_43c": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__43c.html",
+      "label": {
+        "de": "§ 43c SGB XI: Begrenzung des Eigenanteils (Leistungszuschlag)",
+        "en": "Section 43c SGB XI: cap on the care co-payment (benefit supplement)"
+      }
+    },
+    "sgb11_44": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__44.html",
+      "label": {
+        "de": "§ 44 SGB XI: soziale Sicherung der Pflegepersonen",
+        "en": "Section 44 SGB XI: social security for carers"
+      }
+    },
+    "sgb11_44a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__44a.html",
+      "label": {
+        "de": "§ 44a SGB XI: Pflegeunterstützungsgeld und Zuschüsse bei Pflegezeit",
+        "en": "Section 44a SGB XI: carer's leave allowance and contribution subsidies"
+      }
+    },
+    "sgb11_45a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__45a.html",
+      "label": {
+        "de": "§ 45a SGB XI: Angebote zur Unterstützung im Alltag, Umwandlungsanspruch",
+        "en": "Section 45a SGB XI: everyday support services, conversion of the in-kind budget"
+      }
+    },
+    "sgb11_45b": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__45b.html",
+      "label": {
+        "de": "§ 45b SGB XI: Entlastungsbetrag",
+        "en": "Section 45b SGB XI: relief amount (Entlastungsbetrag)"
+      }
+    },
+    "sgb11_45f": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__45f.html",
+      "label": {
+        "de": "§ 45f SGB XI: Zuschlag für ambulant betreute Wohngruppen",
+        "en": "Section 45f SGB XI: supplement for assisted shared flats"
+      }
+    },
+    "sgb6_166": {
+      "url": "https://www.gesetze-im-internet.de/sgb_6/__166.html",
+      "label": {
+        "de": "§ 166 SGB VI: beitragspflichtige Einnahmen von Pflegepersonen",
+        "en": "Section 166 SGB VI: contribution base for family carers"
+      }
+    },
+    "estg33b": {
+      "url": "https://www.gesetze-im-internet.de/estg/__33b.html",
+      "label": {
+        "de": "§ 33b EStG: Pflege-Pauschbetrag (Absatz 6)",
+        "en": "Section 33b Income Tax Act: carer's lump sum (paragraph 6)"
+      }
+    },
+    "sgb12_61": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__61.html",
+      "label": {
+        "de": "§ 61 SGB XII: Hilfe zur Pflege, Leistungsberechtigte",
+        "en": "Section 61 SGB XII: social assistance for care"
+      }
+    },
+    "sgb12_90": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__90.html",
+      "label": {
+        "de": "§ 90 SGB XII: einzusetzendes Vermögen",
+        "en": "Section 90 SGB XII: assets to be used"
+      }
+    },
+    "sgb12_94": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__94.html",
+      "label": {
+        "de": "§ 94 SGB XII: Übergang von Unterhaltsansprüchen (100.000-Euro-Grenze)",
+        "en": "Section 94 SGB XII: recourse against relatives (€100,000 threshold)"
+      }
+    },
+    "dv90": {
+      "url": "https://www.gesetze-im-internet.de/bshg_88abs2dv_1988/__1.html",
+      "label": {
+        "de": "§ 1 DV zu § 90 Abs. 2 Nr. 9 SGB XII: Schonbetrag 10.000 €",
+        "en": "Section 1 of the regulation on Section 90(2) no. 9 SGB XII: protected savings €10,000"
+      }
+    },
+    "vdek2607": {
+      "url": "https://www.vdek.com/presse/pressemitteilungen/2026/stationaere-pflege-eigenanteile-juli-2026.html",
+      "label": {
+        "de": "vdek: Eigenbeteiligung in der stationären Pflege, Bund und Länder am 1. Juli 2026 (PM vom 14.07.2026)",
+        "en": "vdek: care home co-payments, federal and state averages on 1 July 2026 (press release 14 July 2026)"
+      }
+    },
+    "vdek2601": {
+      "url": "https://www.vdek.com/presse/pressemitteilungen/2026/eigenanteile-pflegeheim-auswertung.html",
+      "label": {
+        "de": "vdek: Eigenanteile im Pflegeheim am 1. Januar 2026 (PM vom 22.01.2026)",
+        "en": "vdek: care home co-payments on 1 January 2026 (press release 22 January 2026)"
+      }
+    },
+    "vdekDaten": {
+      "url": "https://www.vdek.com/presse/daten/f_pflegeversicherung.html",
+      "label": {
+        "de": "vdek: Daten zur Pflegeversicherung",
+        "en": "vdek: long-term care insurance data"
+      }
+    },
+    "bmgLeistungen": {
+      "url": "https://www.bundesgesundheitsministerium.de/themen/pflege/online-ratgeber-pflege/leistungen-der-pflegeversicherung/leistungen-im-ueberblick.html",
+      "label": {
+        "de": "BMG: Leistungen der Pflegeversicherung im Überblick",
+        "en": "Federal Ministry of Health: overview of long-term care insurance benefits"
+      }
+    },
+    "bmgZahlen": {
+      "url": "https://www.bundesgesundheitsministerium.de/themen/pflege/pflegeversicherung-zahlen-und-fakten.html",
+      "label": {
+        "de": "BMG: Zahlen und Fakten zur Pflegeversicherung",
+        "en": "Federal Ministry of Health: facts and figures on long-term care insurance"
+      }
+    },
+    "bmgPnog": {
+      "url": "https://www.bundesgesundheitsministerium.de/service/gesetze-und-verordnungen/detail/pflegeneuordnungsgesetz-pnog",
+      "label": {
+        "de": "BMG: Pflegeneuordnungsgesetz (PNOG), Gesetzgebungsverfahren",
+        "en": "Federal Ministry of Health: Care Reorganisation Act (PNOG), legislative procedure"
+      }
+    },
+    "bmgPnogPm": {
+      "url": "https://www.bundesgesundheitsministerium.de/presse/pressemitteilungen/kabinett-beschliesst-pflegeneuordnungsgesetz",
+      "label": {
+        "de": "BMG: Kabinett beschließt Pflegeneuordnungsgesetz (30.09.2026)",
+        "en": "Federal Ministry of Health: cabinet adopts the PNOG draft (30 September 2026)"
+      }
+    },
+    "lfpBayern": {
+      "url": "https://www.lfp.bayern.de/landespflegegeld/",
+      "label": {
+        "de": "Bayerisches Landesamt für Pflege: Landespflegegeld",
+        "en": "Bavarian State Office for Care: Bavarian care allowance (Landespflegegeld)"
+      }
+    },
+    "drvRechengroessen": {
+      "url": "https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Presse/Meldungen/2025/25-10-08-bundeskabinett-sv-rechengroessen-vo-2026.html",
+      "label": {
+        "de": "DRV: Sozialversicherungsrechengrößen 2026 (Bezugsgröße, Durchschnittsentgelt)",
+        "en": "German Pension Insurance: 2026 social insurance reference values"
+      }
+    },
+    "drvRentenwert": {
+      "url": "https://www.deutsche-rentenversicherung.de/SharedDocs/FAQ/Gesetzesaenderungen/Rentenanpassung/FAQ-Rentenanpassung-2026/Rentenanpassung-2026.html",
+      "label": {
+        "de": "DRV: Rentenanpassung 2026 (Rentenwert 42,52 € ab 1. Juli 2026)",
+        "en": "German Pension Insurance: 2026 pension increase (pension value €42.52 from 1 July 2026)"
+      }
+    },
+    "mdBegutachtung": {
+      "url": "https://www.medizinischerdienst.de/versicherte/pflegebegutachtung",
+      "label": {
+        "de": "Medizinischer Dienst: Pflegebegutachtung",
+        "en": "Medical Service (Medizinischer Dienst): care needs assessment"
+      }
+    },
+    "vzNrwPflegewohngeld": {
+      "url": "https://www.verbraucherzentrale.nrw/wissen/gesundheit-pflege/pflege-im-heim/pflegewohngeld-in-nrw-finanzielle-hilfe-in-stationaeren-einrichtungen-86793",
+      "label": {
+        "de": "Verbraucherzentrale NRW: Pflegewohngeld in NRW",
+        "en": "Consumer Centre NRW: care home housing allowance (Pflegewohngeld) in North Rhine-Westphalia"
+      }
+    },
+    "estg3": {
+      "url": "https://www.gesetze-im-internet.de/estg/__3.html",
+      "label": {
+        "de": "§ 3 Nr. 36 EStG: steuerfreie Einnahmen pflegender Angehöriger",
+        "en": "Section 3 no. 36 Income Tax Act: tax-free payments to family carers"
+      }
+    },
+    "sgb11_13": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__13.html",
+      "label": {
+        "de": "§ 13 SGB XI: Verhältnis zu anderen Sozialleistungen (keine Anrechnung als Einkommen)",
+        "en": "Section 13 SGB XI: relation to other benefits (not counted as income)"
+      }
+    },
+    "sgb11_33": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__33.html",
+      "label": {
+        "de": "§ 33 SGB XI: Leistungsvoraussetzungen, Antrag, Vorversicherungszeit",
+        "en": "Section 33 SGB XI: conditions, application, prior insurance period"
+      }
+    },
+    "sgb11_34": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__34.html",
+      "label": {
+        "de": "§ 34 SGB XI: Ruhen der Leistungen, Auslandsaufenthalt",
+        "en": "Section 34 SGB XI: suspension of benefits, stays abroad"
+      }
+    }
+  },
+  "vorversicherung": {
+    "_quelle": "§ 33 Abs. 2 SGB XI",
+    "jahre": 2,
+    "zeitraum_jahre": 10
+  },
+  "ausland": {
+    "_quelle": "§ 34 Abs. 1 und 1a SGB XI",
+    "wochen_vorruebergehend": 8
+  },
+  "krankenhaus": {
+    "_quelle": "§ 34 Abs. 2 SGB XI",
+    "pflegegeld_weiter_wochen": 8
+  },
+  "pflegegeld_2024": {
+    "_quelle": "§ 37 Abs. 1 SGB XI in der Fassung bis 31.12.2024 (Beträge 2024); 2025 um 4,5 % angehoben (§ 30 Abs. 1)",
+    "2": 332,
+    "3": 573,
+    "4": 765,
+    "5": 947
+  }
+}

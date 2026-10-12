@@ -1,0 +1,90 @@
+---
+/** So rechnen wir (Vertrauensseite, RECETTE §8.2): Rechenregeln, Prüfungen, Grenzen, alle Quellen. */
+import PageLayout from '../layouts/PageLayout.astro';
+import { route, type Locale } from '../i18n/routes';
+import { P } from '../lib/engine/params';
+import { formatMoney, formatPercent, formatNumber, displayDate } from '../lib/format';
+import { breadcrumbSchema, webPageSchema } from '../lib/seo';
+import { LAST_UPDATED, CONTACT_EMAIL, REVIEW_CYCLE_MONTHS, LANG_TAGS } from '../data/site-config';
+import { PRUEFUNG } from '../lib/pruefung';
+import { rentenpunkte } from '../lib/engine/angehoerige';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const de = lang === 'de';
+const $ = (n: number, d = 0) => formatMoney(n, d, lang);
+const pc = (x: number, d = 0) => formatPercent(x, d, lang);
+const n = (x: number, d = 0) => formatNumber(x, d, lang);
+const dt = (iso: string) => displayDate(iso, LANG_TAGS[lang]);
+const title = de ? 'So rechnen wir: Pflegegrad, Leistungen und Heimkosten 2026' : 'How We Calculate: Care Grade, Benefits, Care Home Costs 2026';
+const description = de ? 'Berechnungsmethode 2026: Punkte und Gewichtung nach § 15 SGB XI, Pflegegeld, Kombination, Jahresbetrag, Leistungszuschlag im Heim, vdek-Daten, Tests und Grenzen.' : 'Method for 2026: points and weighting under section 15 SGB XI, care allowance, combined benefit, annual budget, care home supplement, vdek data, tests and limits.';
+const h1 = de ? 'So rechnen wir' : 'How we calculate';
+const path = route('method', lang);
+const sources = Object.values(P.sources);
+const N = P.nba;
+const r5 = rentenpunkte(5, 'geld');
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: h1, description, path, lang }), breadcrumbSchema([{ name: de ? 'Start' : 'Home', path: route('home', lang) }, { name: h1, path }])]} breadcrumbs={[{ label: h1 }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">{h1}</h1></header>
+  {de ? (
+  <div class="prose prose-slate max-w-none">
+    <p>Alle Beträge stehen in einer einzigen Parameterdatei, die am <time datetime={P.retrieved_at}>{dt(P.retrieved_at)}</time> an den Quellen gelesen wurde: SGB XI {P.sgb11_stand} auf gesetze-im-internet.de, die vdek-Tabellen vom {dt(P.heim.stand_vorher)} und {dt(P.heim.stand)}, die Rechengrößen der Deutschen Rentenversicherung. Rechner und Texte lesen nur aus dieser Datei; ändert sich ein Wert, ändert er sich auf allen Seiten zugleich.</p>
+    <h2>Tests, ohne die nichts veröffentlicht wird</h2>
+    <ul>
+      <li><strong>vdek-Tabellen</strong>: {PRUEFUNG.vdekWerte} Werte (Bund und alle Länder, ohne Zuschuss und nach 15, 30, 50 und 75 % Zuschlag, an beiden Stichtagen 2026) werden aus EEE, Unterkunft und Verpflegung und Investitionskosten nachgerechnet. Erlaubt ist eine Abweichung von höchstens 2 €, weil der vdek gerundete Durchschnitte veröffentlicht.</li>
+      <li><strong>Bewertungssystematik</strong>: jede Grenze der Punktbereiche aus Anlage 2 zu § 15 SGB XI, die Höchstwerte je Modul ({N.bereiche.m1.max}, {N.bereiche.m2.max}, {N.bereiche.m3.max}, {N.bereiche.m4.max}, {N.bereiche.m5.max}, {N.bereiche.m6.max} Punkte), die Gradgrenzen {N.schwellen.map((s) => n(s, 1)).join(' / ')} und das Beispiel der Anlage 1 (dreimal Medikamente und einmal Blutzucker täglich ergeben vier Maßnahmen pro Tag).</li>
+      <li><strong>Leistungen</strong>: Kombination (40 % Sachleistung ergeben 60 % Pflegegeld), Obergrenze des Umwandlungsanspruchs, Aufteilung des Jahresbetrags mit der Grenze für Angehörige, halbes Pflegegeld für höchstens acht Wochen, Teilmonat mit 30 Tagen.</li>
+    </ul>
+    <h2>Pflegegrad</h2>
+    <p>Jede Antwort ergibt die Einzelpunkte der Anlage 1: Modul 1 und 6 je 0 bis 3, Modul 2 je 0 bis 3, Modul 3 nach Häufigkeit 0, 1, 3 oder 5. In Modul 4 zählt Essen dreifach, Trinken und Toilette doppelt; Inkontinenz zählt nur, wenn sie überwiegend oder vollständig besteht oder eine künstliche Ableitung vorliegt; teilweise Sondenernährung ergibt 6, vollständige 3 Punkte. In Modul 5 werden die Maßnahmen auf einen Tag umgerechnet (Woche durch 7, Monat durch 30) und gestuft; Arztbesuche und andere zeitintensive Termine zählen mit den Faktoren des Gesetzes. Jede Modulsumme fällt in einen von fünf Punktbereichen, die gewichtet werden: Mobilität {pc(N.gewichtung.m1)}, der höhere Wert aus Modul 2 oder 3 {pc(N.gewichtung.m23)}, Selbstversorgung {pc(N.gewichtung.m4)}, Krankheit und Therapie {pc(N.gewichtung.m5)}, Alltag {pc(N.gewichtung.m6)}. Bei Kindern bis 18 Monaten ersetzt das Kriterium 4.K das Modul 4, und die Grade verschieben sich um eine Stufe (§ 15 Abs. 7).</p>
+    <h2>Leistungen zu Hause</h2>
+    <p>Pflegegeld und Sachleistung nach §§ 36 und 37, Kombination nach § 38: Das Pflegegeld sinkt um den Prozentsatz, zu dem die Sachleistung genutzt wurde, und der Umwandlungsanspruch für Alltagshilfen (§ 45a Abs. 4, höchstens {pc(P.umwandlung.anteil_max)} des Sachleistungsbetrags) zählt dabei mit. Tages- und Nachtpflege ist ein eigener Topf ohne Anrechnung (§ 41 Abs. 3). Entlastungsbetrag {$(P.entlastungsbetrag.monat)} für alle Grade zu Hause, Rest bis 30. Juni des Folgejahres (§ 45b). Gemeinsamer Jahresbetrag {$(P.jahresbetrag.euro)} (§ 42a): Kurzzeitpflege und Verhinderungspflege werden in der Reihenfolge Ihrer Eingabe abgezogen; bei nicht erwerbsmäßiger Ersatzpflege durch nahe Angehörige höchstens das Zweifache des Pflegegeldes plus nachgewiesene Aufwendungen (§ 39 Abs. 3).</p>
+    <h2>Pflegeheim</h2>
+    <p>Eigenanteil = EEE (einrichtungseinheitlicher Eigenanteil, einschließlich Ausbildungsumlage) minus Leistungszuschlag + Unterkunft und Verpflegung + Investitionskosten. Der Zuschlag beträgt {P.zuschlag.stufen.map((s) => pc(s)).join(', ')} des EEE ab dem {P.zuschlag.ab_monat.join('., ')}. Monat; angebrochene Monate zählen (§ 43c). Ohne eigene Eingabe rechnet der Rechner mit dem vdek-Durchschnitt des Landes; der echte EEE steht im Heimvertrag. Für Pflegegrad 1 gibt es keinen Zuschlag und nur {$(P.vollstationaer['1'])} Zuschuss; der Pflegesatz für diesen Grad ist hausindividuell und wird nicht geschätzt. Die Reichweite des Vermögens zieht jeden Monat die Lücke zwischen Eigenanteil und Rente ab, bis {$(P.sozialhilfe.schonvermoegen)} Schonbetrag erreicht sind; Barbetrag, Kranken- und Pflegeversicherung, Kleidung und Zuzahlungen sind nicht enthalten, die Lücke ist in Wirklichkeit also größer.</p>
+    <h2>Pflegende Angehörige</h2>
+    <p>Beitragsgrundlage nach § 166 Abs. 2 SGB VI als Anteil der Bezugsgröße {$(P.rente.bezugsgroesse_monat)}, je nach Grad und Leistungsart von 18,9 bis 100 %; Entgeltpunkte durch das vorläufige Durchschnittsentgelt {$(P.rente.durchschnittsentgelt)}; Rente mit dem Rentenwert {$(P.rente.rentenwert, 2)} ab 1. Juli 2026. Ein Jahr Pflege bei Grad 5 und reinem Pflegegeld ergibt {n(r5.punkteJahr, 4)} Punkte und {$(r5.renteProJahr, 2)} Monatsrente. Künftige Rentenanpassungen sind nicht eingerechnet.</p>
+    <h2>Was die Rechner nicht können</h2>
+    <ul>
+      <li>Das Gutachten ersetzen: Der Medizinische Dienst bewertet, was er sieht und hört; besondere Bedarfskonstellationen (§ 15 Abs. 4) sind nicht abgebildet.</li>
+      <li>Private Pflegeversicherung, Beihilfe und Pflegezusatzversicherungen.</li>
+      <li>Hilfe zur Pflege im Einzelfall: Einkommensgrenze, Barbetrag und Kosten der Unterkunft prüft das Sozialamt.</li>
+      <li>Landesleistungen außer dem bayerischen Landespflegegeld und Hinweisen auf Pflegewohngeld.</li>
+      <li>Den Regierungsentwurf zum Pflegeneuordnungsgesetz: Er wird erst eingerechnet, wenn er verkündet ist.</li>
+    </ul>
+    <h2>Aktualisierung</h2>
+    <p>Volle Durchsicht spätestens alle {REVIEW_CYCLE_MONTHS} Monate, nach jeder vdek-Auswertung, jeder Änderung des SGB XI und zur Dynamisierung am 1. Januar 2028. Fehler bitte an <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>; sie werden an der Quelle geprüft, korrigiert und als Test aufgenommen. Siehe auch die <a href={route('editorial', lang)}>Redaktionsgrundsätze</a>.</p>
+    <h2>Alle Quellen</h2>
+    <ul>{sources.map((s) => <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label.de}</a></li>)}</ul>
+  </div>
+  ) : (
+  <div class="prose prose-slate max-w-none">
+    <p>Every amount sits in one parameter file read against the sources on <time datetime={P.retrieved_at}>{dt(P.retrieved_at)}</time>: Book XI of the Social Code (SGB XI) as last amended on 24 July 2026, the vdek care home tables of {dt(P.heim.stand_vorher)} and {dt(P.heim.stand)}, and the German Pension Insurance reference values. Calculators and pages read only from that file, so a change shows up everywhere at once.</p>
+    <h2>Tests that block every release</h2>
+    <ul>
+      <li><strong>vdek tables</strong>: {PRUEFUNG.vdekWerte} values (national and every state, without supplement and after 15, 30, 50 and 75 percent, on both 2026 reference dates) recomputed from EEE, board and lodging and investment costs, with at most 2 euros of rounding difference because vdek publishes rounded averages.</li>
+      <li><strong>Scoring system</strong>: every band boundary in Annex 2 to section 15 SGB XI, the maximum per module ({N.bereiche.m1.max}, {N.bereiche.m2.max}, {N.bereiche.m3.max}, {N.bereiche.m4.max}, {N.bereiche.m5.max}, {N.bereiche.m6.max} points), the grade thresholds {N.schwellen.map((s) => n(s, 1)).join(' / ')} and the Annex 1 example of four measures a day.</li>
+      <li><strong>Benefits</strong>: the combined benefit (40 percent services leave 60 percent allowance), the conversion cap, the split of the annual budget with the cap for relatives, half allowance for at most eight weeks, part months counted as 30 days.</li>
+    </ul>
+    <h2>Care grade</h2>
+    <p>Each answer gives the item points of Annex 1: modules 1, 2 and 6 score 0 to 3 per item, module 3 scores 0, 1, 3 or 5 by frequency. In module 4 eating counts three times, drinking and toilet use twice, incontinence items only if incontinence is mostly or fully present or there is a catheter or stoma, and partial tube feeding scores 6 against 3 for full tube feeding. Module 5 converts measures to a daily rate (week divided by 7, month by 30). Each module total falls in one of five bands that are weighted: mobility {pc(N.gewichtung.m1)}, the higher of modules 2 and 3 {pc(N.gewichtung.m23)}, self-care {pc(N.gewichtung.m4)}, illness and treatment {pc(N.gewichtung.m5)}, daily life {pc(N.gewichtung.m6)}. For children up to 18 months, item 4.K replaces module 4 and grades move up one step (section 15(7)).</p>
+    <h2>Care at home</h2>
+    <p>Allowance and services under sections 36 and 37, the combined benefit under section 38 with the conversion claim (section 45a(4), at most {pc(P.umwandlung.anteil_max)} of the services budget) counted as services. Day and night care is a separate budget (section 41(3)). Relief amount of {$(P.entlastungsbetrag.monat)} at every grade, carried over until 30 June of the next year. Joint annual budget of {$(P.jahresbetrag.euro)} (section 42a), with non-professional cover by close relatives capped at twice the allowance plus documented costs.</p>
+    <h2>Care homes</h2>
+    <p>Co-payment = EEE (the uniform care co-payment of the home, including the training levy) minus the supplement, plus board and lodging, plus investment costs. The supplement is {P.zuschlag.stufen.map((s) => pc(s)).join(', ')} of the EEE from month {P.zuschlag.ab_monat.join(', ')}; part months count (section 43c). Without your own figure the calculator uses the state average. Grade 1 gets no supplement and only {$(P.vollstationaer['1'])}; the home’s own grade 1 rate is not estimated. The savings run-down deducts the monthly gap between co-payment and pension until {$(P.sozialhilfe.schonvermoegen)} of protected savings remain; personal allowance, insurance, clothing and co-payments are not included, so the real gap is larger.</p>
+    <h2>Family carers</h2>
+    <p>Contribution base under section 166(2) SGB VI as a share of the reference value of {$(P.rente.bezugsgroesse_monat)}, from 18.9 to 100 percent by grade and benefit type, divided by the provisional average pay of {$(P.rente.durchschnittsentgelt)}, times the pension value of {$(P.rente.rentenwert, 2)} from 1 July 2026. One year at grade 5 with allowance only gives {n(r5.punkteJahr, 4)} points and {$(r5.renteProJahr, 2)} of monthly pension. Future pension increases are not included.</p>
+    <h2>What the calculators cannot do</h2>
+    <ul>
+      <li>Replace the assessment: the Medical Service scores what it observes; special needs constellations (section 15(4)) are not modelled.</li>
+      <li>Private long-term care insurance, civil servant allowances (Beihilfe) and supplementary policies.</li>
+      <li>Decide social assistance for care: the welfare office checks income limits, personal allowance and housing costs.</li>
+      <li>State benefits other than the Bavarian state care allowance and references to care home housing allowances.</li>
+      <li>The draft Care Reorganisation Act: it is built in only once it is law.</li>
+    </ul>
+    <h2>Updates</h2>
+    <p>Full review at least every {REVIEW_CYCLE_MONTHS} months, after each vdek release and every change to Book XI. Report errors to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. See the <a href={route('editorial', lang)}>editorial policy</a>.</p>
+    <h2>All sources</h2>
+    <ul>{sources.map((s) => <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label.en}</a></li>)}</ul>
+  </div>
+  )}
+  <p class="mt-6 text-sm text-navy-600">{de ? 'Zuletzt geprüft' : 'Last checked'}: <time datetime={LAST_UPDATED}>{dt(LAST_UPDATED)}</time>.</p>
+</PageLayout>

@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { PRUEFUNG } from '../../lib/pruefung';
+const lang = 'en';
+---
+<PageLayout title={`Editorial Policy of ${SITE_NAMES[lang]}: Sources and Checks`} description="Where the figures for care allowance, care services, the annual respite budget and care home costs come from, when they are checked, who is responsible, how errors are fixed." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Editorial policy and corrections</h1>
+    <p>A wrong figure here can cost a family an objection or skew a care home decision. This page says where every number comes from and what happens when one is wrong.</p>
+    <h2>Responsibility</h2><p>Content and calculators are the responsibility of {AUTHOR_NAME}. Contact: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Primary sources only</h2>
+    <ul>
+      <li><strong>gesetze-im-internet.de</strong>: Book XI of the Social Code with Annexes 1 and 2 to section 15, Books VI and XII, the Income Tax Act and the carer leave acts as in force;</li>
+      <li><strong>Federal Ministry of Health</strong>: benefit overviews, the official notice of benefit amounts, the status of bills;</li>
+      <li><strong>vdek</strong> (association of substitute health funds): care home co-payments by state on 1 January and 1 July;</li>
+      <li><strong>German Pension Insurance</strong>: reference value, average pay, pension value;</li>
+      <li><strong>state authorities</strong>, such as the Bavarian State Office for Care for the state care allowance.</li>
+    </ul>
+    <p>Blogs, placement portals and other calculators are not sources, however high they rank.</p>
+    <h2>Checks before every release</h2><p>{PRUEFUNG.vdekWerte} values from the vdek tables, every boundary of the scoring system and the worked examples in the law run as automated tests. One deviating value stops the release.</p>
+    <h2>Schedule</h2><p>A full review at least every {REVIEW_CYCLE_MONTHS} months, after each vdek release (January and July), after every amendment to Book XI and at the latest for the indexation on 1 January 2028. Bills are described as drafts and never built into a calculator before they are law.</p>
+    <h2>Corrections</h2>
+    <ol><li>Check against the primary source.</li><li>Fix in the parameter file or the calculator and add a test that catches the error in future.</li><li>New date on every page; a substantive correction is noted on the page concerned.</li></ol>
+    <h2>Independence</h2><p>No money from care home operators, care services, live-in carer agencies, insurers or stairlift makers, and no recommendation of individual providers.</p>
+    <p>See also <a href={route('method', lang)}>how we calculate</a>. Version: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

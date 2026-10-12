@@ -1,0 +1,80 @@
+{
+ "legalCountry": "Frankreich / France",
+ "registerLabel": "SIREN",
+ "vatLabel": "USt-IdNr.",
+ "jurisdiction": "France",
+ "supervisoryAuthority": "Commission nationale de l'informatique et des libertés (CNIL)",
+ "supervisoryAuthorityUrl": "https://www.cnil.fr",
+ "year": 2026,
+ "founded": "2026",
+ "volumes": "../reports/volumes-2026-10-12-dix/de-pflege.txt",
+ "volumesNote": "Volumes ESTIMÉS (Google Trends calé sur des requêtes mesurées au KP), reports/niches-2026-10-12/estimations/de.md §1 : 0,6 à 1,25 M/mois ; GO validé par l'éditeur le 2026-10-12 sur estimations.",
+ "folder": "de-pflege",
+ "outDir": "a-publier/Mottalib-10M",
+ "url": "https://de-pflege.example",
+ "locales": [
+  "de",
+  "en"
+ ],
+ "names": {
+  "de": "Pflegerechnung",
+  "en": "Pflegerechnung"
+ },
+ "langTags": {
+  "de": "de-DE",
+  "en": "en-DE"
+ },
+ "ogLocales": {
+  "de": "de_DE",
+  "en": "en_GB"
+ },
+ "localeTag": "de-DE",
+ "currency": "EUR",
+ "flag": "de",
+ "symbol": "PG",
+ "accent": "#B42318",
+ "authorRole": {
+  "de": "Herausgeber von Pflegerechnern: Pflegegrad, Leistungen der Pflegekasse, Heimkosten",
+  "en": "Publisher of German long-term care calculators: care grade, Pflegekasse benefits, care home costs"
+ },
+ "authorDesc": {
+  "de": "(siehe src/data/site-config.ts)",
+  "en": "(see src/data/site-config.ts)"
+ },
+ "email": "kontakt@de-pflege.example",
+ "indexnow": "b7e14c2a9f3d4e6b8a1c5d0e2f7a9b3c",
+ "shortName": "Pflegerechnung",
+ "description": "Pflegegeld 2026 nach Pflegegrad, Pflegegrad aus den 64 Kriterien des Gutachtens, Verhinderungs- und Kurzzeitpflege und der Eigenanteil im Pflegeheim in jedem Bundesland.",
+ "port": 4501,
+ "og": [
+  {
+   "file": "og-de.png",
+   "title": "Pflegegrad, Pflegegeld\nund Heimkosten 2026",
+   "subtitle": "SGB XI · vdek 1.7.2026 · alle 16 Länder",
+   "badge": "2026",
+   "brand": "Pflegerechnung"
+  },
+  {
+   "file": "og-en.png",
+   "title": "German care grade,\nbenefits and care home costs",
+   "subtitle": "SGB XI · vdek 1 July 2026 · all 16 states",
+   "badge": "2026",
+   "brand": "Pflegerechnung"
+  }
+ ],
+ "lastUpdated": "2026-10-12",
+ "knowsAbout": {
+  "de": [
+   "Pflegegrad und Begutachtungsinstrument (§ 15 SGB XI)",
+   "Leistungen der Pflegeversicherung 2026",
+   "Eigenanteile im Pflegeheim nach Bundesland",
+   "Soziale Sicherung pflegender Angehöriger"
+  ],
+  "en": [
+   "German care grades and the assessment instrument (Section 15 SGB XI)",
+   "German long-term care insurance benefits 2026",
+   "Care home co-payments by German state",
+   "Pension and tax rules for family carers in Germany"
+  ]
+ }
+}

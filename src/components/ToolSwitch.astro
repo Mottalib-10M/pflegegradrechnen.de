@@ -1,0 +1,19 @@
+---
+/** Ein Ort, an dem jede Rechnerart ihrem Komponenten zugeordnet wird (Rechnerseiten, Länderseiten, Einbettung). */
+import LeistungenRechner from './calc/LeistungenRechner';
+import PflegegradRechner from './calc/PflegegradRechner';
+import HeimRechner from './calc/HeimRechner';
+import KombiRechner from './calc/KombiRechner';
+import JahresbetragRechner from './calc/JahresbetragRechner';
+import RenteRechner from './calc/RenteRechner';
+import { route, type Locale } from '../i18n/routes';
+import type { Tool } from '../lib/guide-types';
+interface Props { tool?: Tool; lang: Locale; methodHref?: string; preset?: Record<string, never> }
+const { tool, lang, methodHref, preset = {} } = Astro.props;
+---
+{tool === 'leistungen' && <LeistungenRechner client:load lang={lang} methodHref={methodHref} gradHref={route('pflegegrad-rechner', lang)} preset={preset} />}
+{tool === 'pflegegrad' && <PflegegradRechner client:load lang={lang} methodHref={methodHref} leistungenHref={route('home', lang)} />}
+{tool === 'heim' && <HeimRechner client:load lang={lang} methodHref={methodHref} preset={preset} />}
+{tool === 'kombi' && <KombiRechner client:load lang={lang} methodHref={methodHref} />}
+{tool === 'jahresbetrag' && <JahresbetragRechner client:load lang={lang} methodHref={methodHref} preset={preset} />}
+{tool === 'rente' && <RenteRechner client:load lang={lang} methodHref={methodHref} />}
