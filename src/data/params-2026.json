@@ -927,6 +927,20 @@
         "de": "§ 34 SGB XI: Ruhen der Leistungen, Auslandsaufenthalt",
         "en": "Section 34 SGB XI: suspension of benefits, stays abroad"
       }
+    },
+    "sgb11_84": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__84.html",
+      "label": {
+        "de": "§ 84 SGB XI: Bemessungsgrundsätze, einrichtungseinheitlicher Eigenanteil",
+        "en": "Section 84 SGB XI: rate principles, uniform care co-payment per home"
+      }
+    },
+    "sgb5_39c": {
+      "url": "https://www.gesetze-im-internet.de/sgb_5/__39c.html",
+      "label": {
+        "de": "§ 39c SGB V: Kurzzeitpflege bei fehlender Pflegebedürftigkeit (Krankenkasse)",
+        "en": "Section 39c SGB V: short-term care without a care grade (health insurer)"
+      }
     }
   },
   "vorversicherung": {
