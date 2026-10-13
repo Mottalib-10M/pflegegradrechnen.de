@@ -1,6 +1,6 @@
 import { defineGuide } from '../../lib/guide-types';
 import { kosten, heimMonat, rangliste, LAENDER } from '../../lib/engine/heim';
-import { DE, EN } from '../../lib/fmt';
+import { P, DE, EN } from '../../lib/fmt';
 
 /** Hessen: stärkster Anstieg des Pflegeanteils aller Länder zwischen Januar und Juli 2026. */
 const k = kosten('HE'), v = kosten('HE', 'vorher'), b = kosten('BUND'), rp = kosten('RP');
@@ -44,7 +44,7 @@ ${h.table(['', 'Hessen Jan. 2026', 'Hessen Juli 2026', 'Rheinland-Pfalz Juli 202
 <p>Zwei Lehren aus der Tabelle. Erstens wirkt ein Anstieg des Pflegeanteils am stärksten auf neue Bewohner, weil der Zuschlag im ersten Jahr nur 15 Prozent abfängt. Zweitens ist der Vergleich mit dem Nachbarland nur eine Momentaufnahme: Welches Land günstiger ist, hängt davon ab, wie lange jemand im Heim lebt.</p>
 <p>Für Familien, die das Ersparte planen, empfiehlt sich deshalb, den Rechner mit dem tatsächlichen Einzugsmonat zu füttern und nicht mit dem Landesdurchschnitt allein. Liegt der Eigenanteil dauerhaft über Rente und Vermögen, kommt die ${h.a('hilfe-zur-pflege', 'Hilfe zur Pflege')} in Betracht. Wie der Reformentwurf einzuordnen ist, steht unter ${h.a('pflegereform-2027', 'Pflegereform')}.</p>
 <h2>Was der Anstieg für das Ersparte bedeutet</h2>
-<p>Ein Beispiel: Eine Bewohnerin mit ${h.eur(1700)} Rente und ${h.eur(50000)} Erspartem zieht im Juli 2026 in ein hessisches Heim mit Durchschnittspreisen. Die Lücke im ersten Monat beträgt ${h.eur(k.mit15 - 1700)}. Mit den Januarpreisen wären es ${h.eur(v.mit15 - 1700)} gewesen. Über ein Jahr frisst der Anstieg also mehrere tausend Euro zusätzlich vom Vermögen, das bis auf den Schonbetrag von ${h.eur(10000)} aufgebraucht werden muss, bevor das Sozialamt einspringt. Der Rechner oben zeigt die genaue Reichweite mit Ihren Zahlen.</p>
+<p>Ein Beispiel: Eine Bewohnerin mit ${h.eur(1700)} Rente und ${h.eur(50000)} Erspartem zieht im Juli 2026 in ein hessisches Heim mit Durchschnittspreisen. Die Lücke im ersten Monat beträgt ${h.eur(k.mit15 - 1700)}. Mit den Januarpreisen wären es ${h.eur(v.mit15 - 1700)} gewesen. Über ein Jahr frisst der Anstieg also mehrere tausend Euro zusätzlich vom Vermögen, das bis auf den Schonbetrag von ${h.eur(P.sozialhilfe.schonvermoegen)} aufgebraucht werden muss, bevor das Sozialamt einspringt. Der Rechner oben zeigt die genaue Reichweite mit Ihren Zahlen.</p>
 `,
   },
   en: {
@@ -73,7 +73,7 @@ ${h.table(['', 'Hesse Jan 2026', 'Hesse Jul 2026', 'Rhineland-Palatinate Jul 202
 <p>Two lessons from the table. A rise in the care part hits new residents hardest, because the supplement absorbs only 15 percent in year one. And comparing with a neighbouring state is only a snapshot: which state is cheaper depends on how long someone stays.</p>
 <p>Families planning savings should therefore feed the calculator the actual month of moving in, not just the state average. If the co-payment exceeds pension and savings for good, ${h.a('hilfe-zur-pflege', 'social assistance for care')} can help. See ${h.a('pflegereform-2027', 'the care reform')} for the status of the draft.</p>
 <h2>What the rise means for savings</h2>
-<p>An example: a resident with a ${h.eur(1700)} pension and ${h.eur(50000)} of savings moves into an average-priced home in Hesse in July 2026. The gap in the first month is ${h.eur(k.mit15 - 1700)}; at January prices it would have been ${h.eur(v.mit15 - 1700)}. Over a year the rise eats several thousand euros more of savings, which must be used down to the protected ${h.eur(10000)} before the welfare office steps in. The calculator above shows the exact run-down with your own figures, which is useful for relatives abroad who manage a parent’s finances from a distance.</p>
+<p>An example: a resident with a ${h.eur(1700)} pension and ${h.eur(50000)} of savings moves into an average-priced home in Hesse in July 2026. The gap in the first month is ${h.eur(k.mit15 - 1700)}; at January prices it would have been ${h.eur(v.mit15 - 1700)}. Over a year the rise eats several thousand euros more of savings, which must be used down to the protected ${h.eur(P.sozialhilfe.schonvermoegen)} before the welfare office steps in. The calculator above shows the exact run-down with your own figures, which is useful for relatives abroad who manage a parent’s finances from a distance.</p>
 `,
   },
 });

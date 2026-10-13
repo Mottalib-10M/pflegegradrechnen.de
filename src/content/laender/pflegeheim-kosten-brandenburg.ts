@@ -1,6 +1,6 @@
 import { defineGuide } from '../../lib/guide-types';
 import { kosten, heimMonat, rangliste, LAENDER } from '../../lib/engine/heim';
-import { DE, EN } from '../../lib/fmt';
+import { P, DE, EN } from '../../lib/fmt';
 
 /** Brandenburg: niedrigste Investitionskosten aller Länder; Pflegeanteil deutlich über dem Bund. */
 const k = kosten('BB'), v = kosten('BB', 'vorher'), b = kosten('BUND'), be = kosten('BE');
@@ -29,7 +29,7 @@ export default defineGuide({
     faqs: [
       { q: 'Was sind Investitionskosten, und warum sind sie in Brandenburg niedrig?', a: `Mit den Investitionskosten legt das Heim die Kosten für Gebäude, Ausstattung und Instandhaltung auf die Bewohner um. Sie hängen vom Alter und Standard des Hauses, den Grundstückspreisen und der Förderung durch das Land ab. In Brandenburg liegen sie mit ${DE.eur(k.invest)} auf Rang ${investRang} der niedrigsten Werte; in Nordrhein-Westfalen sind es fast doppelt so viel.` },
       { q: 'Lohnt es sich für Berliner, ein Heim in Brandenburg zu suchen?', a: `Im ersten Jahr spart ein Platz in Brandenburg im Schnitt ${DE.eur(be.mit15 - k.mit15)} im Monat gegenüber Berlin. Ab dem vierten Jahr ist der Unterschied fast verschwunden, weil Berlin einen höheren Pflegeanteil hat, der stärker bezuschusst wird. Entscheidend sind Wege für Besuche, die Anbindung an Ärzte und das einzelne Haus.` },
-      { q: 'Müssen Kinder in Brandenburg für das Pflegeheim der Eltern zahlen?', a: `Wie überall nur, wenn ihr eigenes Jahreseinkommen über ${DE.eur(100000)} liegt (§ 94 Abs. 1a SGB XII). Darunter springt das Sozialamt mit der Hilfe zur Pflege ein, wenn Rente und Vermögen der Eltern nicht reichen. Das Einkommen von Schwiegerkindern zählt dabei nicht.` },
+      { q: 'Müssen Kinder in Brandenburg für das Pflegeheim der Eltern zahlen?', a: `Wie überall nur, wenn ihr eigenes Jahreseinkommen über ${DE.eur(P.sozialhilfe.jahreseinkommensgrenze_kinder)} liegt (§ 94 Abs. 1a SGB XII). Darunter springt das Sozialamt mit der Hilfe zur Pflege ein, wenn Rente und Vermögen der Eltern nicht reichen. Das Einkommen von Schwiegerkindern zählt dabei nicht.` },
     ],
     body: (h) => `
 <h2>Brandenburg im Vergleich mit Berlin und dem Bund</h2>
@@ -43,7 +43,7 @@ ${h.table(['', 'Brandenburg', 'Berlin', 'Bund'], [
 <p>Der Pflegeanteil ist in Brandenburg zwischen Januar und Juli um ${h.eur(k.eee - v.eee)} gewachsen, die Investitionskosten haben sich für ostdeutsche Verhältnisse ungewöhnlich stark bewegt (${h.eur(k.invest - v.invest)} mehr). Trotzdem bleibt der Gebäudeteil der kleinste Posten. Wer zwischen zwei Häusern wählt, sollte vor allem den EEE und die Unterkunft vergleichen; dort liegen in Brandenburg die Unterschiede.</p>
 <p>Für die Familie zählt außerdem, wie lange der Aufenthalt voraussichtlich dauert. Mit dem steigenden Zuschlag sinkt der Eigenanteil bis zum vierten Jahr um ${h.eur(heimMonat(k, 1).eigenanteil - j4.eigenanteil)}. Wie sich die Gebäudekosten der Länder unterscheiden und wer sie tragen sollte, steht unter ${h.a('investitionskosten', 'Investitionskosten')}.</p>
 <h2>Wenn die Rente nicht reicht</h2>
-<p>Viele Renten in Brandenburg liegen unter dem Eigenanteil von ${h.eur(k.mit15)}. Dann wird zuerst das Ersparte eingesetzt, bis zum Schonbetrag von ${h.eur(10000)}; danach übernimmt das Sozialamt die Lücke als ${h.a('hilfe-zur-pflege', 'Hilfe zur Pflege')}. Tragen Sie Rente und Ersparnisse oben in den Rechner ein: Er zeigt, ab welchem Monat der Antrag beim Sozialamt fällig wird, damit keine Rechnung offen bleibt.</p>
+<p>Viele Renten in Brandenburg liegen unter dem Eigenanteil von ${h.eur(k.mit15)}. Dann wird zuerst das Ersparte eingesetzt, bis zum Schonbetrag von ${h.eur(P.sozialhilfe.schonvermoegen)}; danach übernimmt das Sozialamt die Lücke als ${h.a('hilfe-zur-pflege', 'Hilfe zur Pflege')}. Tragen Sie Rente und Ersparnisse oben in den Rechner ein: Er zeigt, ab welchem Monat der Antrag beim Sozialamt fällig wird, damit keine Rechnung offen bleibt.</p>
 `,
   },
   en: {
@@ -58,7 +58,7 @@ ${h.table(['', 'Brandenburg', 'Berlin', 'Bund'], [
     faqs: [
       { q: 'What are investment costs and why are they low in Brandenburg?', a: `They are how a home passes the costs of its building, furnishings and maintenance on to residents. They depend on the age and standard of the building, land prices and state funding. In Brandenburg they are the lowest-ranked at ${EN.eur(k.invest)}; in North Rhine-Westphalia they are almost twice as high.` },
       { q: 'Is it worth looking at homes in Brandenburg if my parent lives in Berlin?', a: `In year one a place in Brandenburg saves about ${EN.eur(be.mit15 - k.mit15)} a month compared with Berlin. From year four the gap has almost disappeared, because Berlin’s higher care part is subsidised more. Travel for visits, access to doctors and the individual home matter more.` },
-      { q: 'Do children in Brandenburg have to pay for a parent’s care home?', a: `As everywhere in Germany, only if their own annual income exceeds ${EN.eur(100000)} (section 94(1a) SGB XII). Below that, the welfare office pays social assistance for care when the parent’s pension and savings run out. A son- or daughter-in-law’s income does not count.` },
+      { q: 'Do children in Brandenburg have to pay for a parent’s care home?', a: `As everywhere in Germany, only if their own annual income exceeds ${EN.eur(P.sozialhilfe.jahreseinkommensgrenze_kinder)} (section 94(1a) SGB XII). Below that, the welfare office pays social assistance for care when the parent’s pension and savings run out. A son- or daughter-in-law’s income does not count.` },
     ],
     body: (h) => `
 <h2>Brandenburg against Berlin and Germany</h2>
@@ -72,7 +72,7 @@ ${h.table(['', 'Brandenburg', 'Berlin', 'Germany'], [
 <p>Brandenburg’s care part grew by ${h.eur(k.eee - v.eee)} between January and July, and investment costs moved unusually for an eastern state (${h.eur(k.invest - v.invest)} more). The building is still the smallest item. When choosing between homes, compare the EEE and accommodation, which is where Brandenburg homes differ.</p>
 <p>How long the stay is likely to last also matters: with the rising supplement the co-payment drops by ${h.eur(heimMonat(k, 1).eigenanteil - j4.eigenanteil)} by year four. See ${h.a('investitionskosten', 'investment costs')} for how states compare and who should pay them.</p>
 <h2>When the pension is not enough</h2>
-<p>Many pensions in Brandenburg are below the ${h.eur(k.mit15)} co-payment. Savings are used first, down to the protected amount of ${h.eur(10000)}; after that the welfare office covers the gap as ${h.a('hilfe-zur-pflege', 'social assistance for care')}. Enter pension and savings in the calculator above to see from which month an application to the welfare office is due, so that no bill is left unpaid. Relatives abroad can make the application on the parent’s behalf with a power of attorney.</p>
+<p>Many pensions in Brandenburg are below the ${h.eur(k.mit15)} co-payment. Savings are used first, down to the protected amount of ${h.eur(P.sozialhilfe.schonvermoegen)}; after that the welfare office covers the gap as ${h.a('hilfe-zur-pflege', 'social assistance for care')}. Enter pension and savings in the calculator above to see from which month an application to the welfare office is due, so that no bill is left unpaid. Relatives abroad can make the application on the parent’s behalf with a power of attorney.</p>
 `,
   },
 });
