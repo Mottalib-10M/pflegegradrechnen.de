@@ -55,10 +55,6 @@ export default function PflegegradRechner({ lang = 'de', methodHref, leistungenH
       <div className="srg h-1.5" aria-hidden="true" />
       <div className={raster}>
         <form onSubmit={(ev) => ev.preventDefault()} className="space-y-3">
-          <div className="flex flex-wrap gap-2 text-sm">
-            <button type="button" className="rounded-md border border-navy-300 bg-white px-3 py-1.5 font-medium text-navy-800 hover:bg-navy-50" onClick={() => setE(cp(LEER))}>{tx(lang, 'Alle Antworten auf „selbständig“', 'Reset all answers to “independent”')}</button>
-            <button type="button" className="rounded-md border border-navy-300 bg-white px-3 py-1.5 font-medium text-navy-800 hover:bg-navy-50" onClick={() => setE(cp(BEISPIEL))}>{tx(lang, 'Beispiel laden', 'Load the example')}</button>
-          </div>
           <Modul offen titel={tx(lang, 'Modul 1 · Mobilität', 'Module 1 · Mobility')} kurz={tx(lang, `${r.summen.m1} Punkte → ${f.num(G.m1, 2)} gewichtet`, `${r.summen.m1} points → ${f.num(G.m1, 2)} weighted`)}>
             {M1.map((k, i) => feld('m1', k, i, stufen(STUFEN_SELB)))}
           </Modul>
@@ -86,6 +82,10 @@ export default function PflegegradRechner({ lang = 'de', methodHref, leistungenH
           <Modul titel={tx(lang, 'Modul 6 · Alltag und soziale Kontakte', 'Module 6 · Daily life and social contact')} kurz={tx(lang, `${r.summen.m6} Punkte → ${f.num(G.m6, 2)}`, `${r.summen.m6} points → ${f.num(G.m6, 2)}`)}>
             {M6.map((k, i) => feld('m6', k, i, stufen(STUFEN_SELB)))}
           </Modul>
+          <div className="flex flex-wrap gap-2 text-sm">
+            <button type="button" className="rounded-md border border-navy-300 bg-white px-3 py-1.5 font-medium text-navy-800 hover:bg-navy-50" onClick={() => setE(cp(LEER))}>{tx(lang, 'Alle Antworten auf „selbständig“', 'Reset all answers to “independent”')}</button>
+            <button type="button" className="rounded-md border border-navy-300 bg-white px-3 py-1.5 font-medium text-navy-800 hover:bg-navy-50" onClick={() => setE(cp(BEISPIEL))}>{tx(lang, 'Beispiel laden', 'Load the example')}</button>
+          </div>
         </form>
         <div aria-live="polite" data-resultat className={kasten}>
           <Kopf label={tx(lang, 'Geschätzter Pflegegrad', 'Estimated care grade')} wert={gradText} unter={tx(lang, `${f.num(r.gesamt, 2)} von 100 Gesamtpunkten`, `${f.num(r.gesamt, 2)} of 100 total points`)} />
