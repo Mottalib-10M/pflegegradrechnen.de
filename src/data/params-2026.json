@@ -595,11 +595,17 @@
     "familienpflegezeit_ab_beschaeftigte": 25
   },
   "sozialhilfe": {
-    "_quelle": "§§ 61, 85, 90, 94 SGB XII; § 1 DV § 90 Abs. 2 Nr. 9 SGB XII",
+    "_quelle": "§§ 27b, 61, 85, 90, 94 SGB XII; § 1 DV § 90 Abs. 2 Nr. 9 SGB XII; Regelbedarfsstufe 1 2026 = 563 € (Anlage zu § 28 SGB XII, RBSFV 2026)",
     "jahreseinkommensgrenze_kinder": 100000,
     "schonvermoegen": 10000,
     "schonvermoegen_unterhaltene": 500,
-    "schenkung_rueckforderung_jahre": 10
+    "schenkung_rueckforderung_jahre": 10,
+    "regelbedarf_rbs1": 563,
+    "barbetrag_anteil": 0.27,
+    "grundbetrag_faktor": 2,
+    "familienzuschlag_anteil": 0.7,
+    "pg45_nicht_zumutbar_anteil": 0.6,
+    "erbe_freibetrag_pflegende_angehoerige": 15340
   },
   "reform": {
     "_quelle": "BMG, Pressemitteilung „Kabinett beschließt Pflegeneuordnungsgesetz“ (30.09.2026)",
@@ -1024,6 +1030,34 @@
       "label": {
         "de": "§ 48 SGB X: Änderung der Verhältnisse",
         "en": "Section 48 SGB X: change in circumstances"
+      }
+    },
+    "sgb12_anlage": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/anlage.html",
+      "label": {
+        "de": "Anlage zu § 28 SGB XII: Regelbedarfsstufen (2026: 563 €)",
+        "en": "Annex to section 28 SGB XII: standard needs levels (2026: €563)"
+      }
+    },
+    "sgb12_87": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__87.html",
+      "label": {
+        "de": "§ 87 SGB XII: Einsatz des Einkommens über der Einkommensgrenze",
+        "en": "Section 87 SGB XII: use of income above the limit"
+      }
+    },
+    "sgb12_63": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__63.html",
+      "label": {
+        "de": "§ 63 SGB XII: Leistungen der Hilfe zur Pflege",
+        "en": "Section 63 SGB XII: social assistance for care benefits"
+      }
+    },
+    "sgb12_102": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__102.html",
+      "label": {
+        "de": "§ 102 SGB XII: Kostenersatz durch Erben",
+        "en": "Section 102 SGB XII: reimbursement by heirs"
       }
     }
   },

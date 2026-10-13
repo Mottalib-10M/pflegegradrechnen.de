@@ -136,3 +136,12 @@ describe('Angehörige: Rente und Steuer', () => {
   it('Pflegegrad 2, Sachleistung: 18,9 %', () => expect(rentenpunkte(2, 'sach').einnahmeMonat).toBe(747.5));
   it('Pflege-Pauschbetrag', () => { expect(pauschbetrag(3).voll).toBe(1100); expect(pauschbetrag(4, 2).jePerson).toBe(900); expect(pauschbetrag(2, 1, true).voll).toBe(1800); });
 });
+
+import { barbetrag, einkommensgrenze } from '../src/lib/engine/sozialhilfe';
+describe('Sozialhilfe 2026', () => {
+  it('Barbetrag 27 % von 563 € = 152,01 €', () => expect(barbetrag()).toBe(152.01));
+  it('Einkommensgrenze § 85: 1.126 € + Miete 600 € + Zuschlag 395 € für den Ehepartner', () => {
+    const e = einkommensgrenze(600, 1);
+    expect(e.grund).toBe(1126); expect(e.zuschlag).toBe(395); expect(e.grenze).toBe(2121);
+  });
+});
