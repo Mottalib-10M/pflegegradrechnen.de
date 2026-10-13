@@ -968,6 +968,20 @@
         "de": "§ 18b SGB XI: Inhalt und Übermittlung des Gutachtens",
         "en": "Section 18b SGB XI: content and sending of the assessment report"
       }
+    },
+    "wbvg9": {
+      "url": "https://www.gesetze-im-internet.de/wbvg/__9.html",
+      "label": {
+        "de": "§ 9 WBVG: Entgelterhöhung im Heimvertrag",
+        "en": "Section 9 Residential and Care Contracts Act (WBVG): price increases"
+      }
+    },
+    "sgb12_27b": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__27b.html",
+      "label": {
+        "de": "§ 27b SGB XII: Lebensunterhalt in Einrichtungen, Barbetrag",
+        "en": "Section 27b SGB XII: living costs in residential care, personal allowance"
+      }
     }
   },
   "vorversicherung": {
@@ -997,5 +1011,9 @@
     "ab_pflegegrad": 2,
     "deckt": "Investitionskosten",
     "nicht_kurzzeitpflege": true
+  },
+  "heimvertrag": {
+    "_quelle": "§ 9 Abs. 2 WBVG",
+    "erhoehung_fruehestens_wochen": 4
   }
 }
