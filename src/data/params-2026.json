@@ -598,7 +598,8 @@
     "_quelle": "§§ 61, 85, 90, 94 SGB XII; § 1 DV § 90 Abs. 2 Nr. 9 SGB XII",
     "jahreseinkommensgrenze_kinder": 100000,
     "schonvermoegen": 10000,
-    "schonvermoegen_unterhaltene": 500
+    "schonvermoegen_unterhaltene": 500,
+    "schenkung_rueckforderung_jahre": 10
   },
   "reform": {
     "_quelle": "BMG, Pressemitteilung „Kabinett beschließt Pflegeneuordnungsgesetz“ (30.09.2026)",
@@ -981,6 +982,48 @@
       "label": {
         "de": "§ 27b SGB XII: Lebensunterhalt in Einrichtungen, Barbetrag",
         "en": "Section 27b SGB XII: living costs in residential care, personal allowance"
+      }
+    },
+    "bgb528": {
+      "url": "https://www.gesetze-im-internet.de/bgb/__528.html",
+      "label": {
+        "de": "§ 528 BGB: Rückforderung einer Schenkung wegen Verarmung",
+        "en": "Section 528 Civil Code: reclaiming a gift after impoverishment"
+      }
+    },
+    "bgb529": {
+      "url": "https://www.gesetze-im-internet.de/bgb/__529.html",
+      "label": {
+        "de": "§ 529 BGB: Ausschluss nach zehn Jahren",
+        "en": "Section 529 Civil Code: exclusion after ten years"
+      }
+    },
+    "sgb12_91": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__91.html",
+      "label": {
+        "de": "§ 91 SGB XII: Sozialhilfe als Darlehen",
+        "en": "Section 91 SGB XII: social assistance as a loan"
+      }
+    },
+    "sgb12_85": {
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__85.html",
+      "label": {
+        "de": "§ 85 SGB XII: Einkommensgrenze",
+        "en": "Section 85 SGB XII: income limit"
+      }
+    },
+    "sgg183": {
+      "url": "https://www.gesetze-im-internet.de/sgg/__183.html",
+      "label": {
+        "de": "§ 183 SGG: kostenfreies Verfahren vor dem Sozialgericht",
+        "en": "Section 183 Social Courts Act: proceedings free of court fees"
+      }
+    },
+    "sgb10_48": {
+      "url": "https://www.gesetze-im-internet.de/sgb_10/__48.html",
+      "label": {
+        "de": "§ 48 SGB X: Änderung der Verhältnisse",
+        "en": "Section 48 SGB X: change in circumstances"
       }
     }
   },
