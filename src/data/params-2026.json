@@ -89,8 +89,14 @@
     "video_bis": "2027-03-31"
   },
   "verfahren": {
-    "_quelle": "§ 18c Abs. 1 SGB XI",
-    "entscheidung_arbeitstage": 25
+    "_quelle": "§§ 18a, 18c SGB XI; § 84 SGG",
+    "entscheidung_arbeitstage": 25,
+    "verzug_euro_woche": 70,
+    "frist_krankenhaus_arbeitstage": 5,
+    "frist_pflegezeit_arbeitstage": 10,
+    "frist_kurzzeit_nach_klinik_arbeitstage": 10,
+    "widerspruch_monate": 1,
+    "widerspruch_ohne_belehrung_jahre": 1
   },
   "nba": {
     "_quelle": "§ 15 SGB XI mit Anlage 1 (Einzelpunkte) und Anlage 2 (Bewertungssystematik)",
@@ -940,6 +946,27 @@
       "label": {
         "de": "§ 39c SGB V: Kurzzeitpflege bei fehlender Pflegebedürftigkeit (Krankenkasse)",
         "en": "Section 39c SGB V: short-term care without a care grade (health insurer)"
+      }
+    },
+    "sgg84": {
+      "url": "https://www.gesetze-im-internet.de/sgg/__84.html",
+      "label": {
+        "de": "§ 84 SGG: Widerspruchsfrist von einem Monat",
+        "en": "Section 84 Social Courts Act: one-month deadline for objections"
+      }
+    },
+    "sgg66": {
+      "url": "https://www.gesetze-im-internet.de/sgg/__66.html",
+      "label": {
+        "de": "§ 66 SGG: Frist bei fehlender oder falscher Rechtsbehelfsbelehrung",
+        "en": "Section 66 Social Courts Act: deadline without correct instructions on remedies"
+      }
+    },
+    "sgb11_18b": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__18b.html",
+      "label": {
+        "de": "§ 18b SGB XI: Inhalt und Übermittlung des Gutachtens",
+        "en": "Section 18b SGB XI: content and sending of the assessment report"
       }
     }
   },
