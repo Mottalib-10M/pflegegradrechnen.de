@@ -586,13 +586,23 @@
     "5": 1800
   },
   "pflegezeit": {
-    "_quelle": "§ 44a Abs. 3 SGB XI; §§ 2, 3 PflegeZG; § 2 FPfZG",
+    "_quelle": "§ 44a Abs. 3 SGB XI i. V. m. § 45 Abs. 2 SGB V; §§ 2 bis 5, 7 PflegeZG; §§ 2, 3 FPfZG; BBG KV 2026 (SV-Rechengrößen 2026)",
     "unterstuetzungsgeld_tage": 10,
     "pflegezeit_monate": 6,
     "pflegezeit_ab_beschaeftigte": 15,
     "familienpflegezeit_monate": 24,
     "familienpflegezeit_min_stunden": 15,
-    "familienpflegezeit_ab_beschaeftigte": 25
+    "familienpflegezeit_ab_beschaeftigte": 25,
+    "unterstuetzungsgeld_anteil": 0.9,
+    "unterstuetzungsgeld_anteil_mit_einmalzahlung": 1.0,
+    "unterstuetzungsgeld_max_bbg_anteil": 0.7,
+    "bbg_kv_jahr": 69750,
+    "ankuendigung_pflegezeit_arbeitstage": 10,
+    "kuendigungsschutz_vorlauf_wochen": 12,
+    "gesamtdauer_monate": 24,
+    "darlehen_anteil_differenz": 0.5,
+    "unterstuetzungsgeld_max_tag": 135.63,
+    "ankuendigung_familienpflegezeit_wochen": 8
   },
   "sozialhilfe": {
     "_quelle": "§§ 27b, 61, 85, 90, 94 SGB XII; § 1 DV § 90 Abs. 2 Nr. 9 SGB XII; Regelbedarfsstufe 1 2026 = 563 € (Anlage zu § 28 SGB XII, RBSFV 2026)",
@@ -1059,6 +1069,111 @@
         "de": "§ 102 SGB XII: Kostenersatz durch Erben",
         "en": "Section 102 SGB XII: reimbursement by heirs"
       }
+    },
+    "pflegezg2": {
+      "url": "https://www.gesetze-im-internet.de/pflegezg/__2.html",
+      "label": {
+        "de": "§ 2 PflegeZG: kurzzeitige Arbeitsverhinderung (10 Arbeitstage)",
+        "en": "Section 2 Care Leave Act: short-term leave (10 working days)"
+      }
+    },
+    "pflegezg3": {
+      "url": "https://www.gesetze-im-internet.de/pflegezg/__3.html",
+      "label": {
+        "de": "§ 3 PflegeZG: Pflegezeit (mehr als 15 Beschäftigte)",
+        "en": "Section 3 Care Leave Act: care leave (employers with more than 15 staff)"
+      }
+    },
+    "pflegezg5": {
+      "url": "https://www.gesetze-im-internet.de/pflegezg/__5.html",
+      "label": {
+        "de": "§ 5 PflegeZG: Kündigungsschutz",
+        "en": "Section 5 Care Leave Act: protection against dismissal"
+      }
+    },
+    "pflegezg7": {
+      "url": "https://www.gesetze-im-internet.de/pflegezg/__7.html",
+      "label": {
+        "de": "§ 7 PflegeZG: nahe Angehörige",
+        "en": "Section 7 Care Leave Act: definition of close relatives"
+      }
+    },
+    "fpfzg2": {
+      "url": "https://www.gesetze-im-internet.de/fpfzg/__2.html",
+      "label": {
+        "de": "§ 2 FPfZG: Familienpflegezeit (24 Monate, 15 Stunden)",
+        "en": "Section 2 Family Care Leave Act: family care leave (24 months, 15 hours)"
+      }
+    },
+    "fpfzg3": {
+      "url": "https://www.gesetze-im-internet.de/fpfzg/__3.html",
+      "label": {
+        "de": "§ 3 FPfZG: zinsloses Darlehen des BAFzA",
+        "en": "Section 3 Family Care Leave Act: interest-free loan"
+      }
+    },
+    "sgb5_45": {
+      "url": "https://www.gesetze-im-internet.de/sgb_5/__45.html",
+      "label": {
+        "de": "§ 45 SGB V: Höhe des Pflegeunterstützungsgeldes (90 %)",
+        "en": "Section 45 SGB V: amount of the carer’s leave allowance (90%)"
+      }
+    },
+    "sgb11_39a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__39a.html",
+      "label": {
+        "de": "§ 39a SGB XI: Ergänzende Unterstützung bei digitalen Pflegeanwendungen",
+        "en": "Section 39a SGB XI: support when using digital care apps"
+      }
+    },
+    "sgb11_40a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__40a.html",
+      "label": {
+        "de": "§ 40a SGB XI: Digitale Pflegeanwendungen",
+        "en": "Section 40a SGB XI: digital care applications"
+      }
+    },
+    "sgb11_45g": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__45g.html",
+      "label": {
+        "de": "§ 45g SGB XI: Anschubfinanzierung für ambulant betreute Wohngruppen",
+        "en": "Section 45g SGB XI: start-up funding for shared care flats"
+      }
+    },
+    "sgb11_7a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__7a.html",
+      "label": {
+        "de": "§ 7a SGB XI: Pflegeberatung",
+        "en": "Section 7a SGB XI: care counselling"
+      }
+    },
+    "sgb11_78": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__78.html",
+      "label": {
+        "de": "§ 78 SGB XI: Pflegehilfsmittelverzeichnis",
+        "en": "Section 78 SGB XI: directory of care aids"
+      }
+    },
+    "sgb11_17a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__17a.html",
+      "label": {
+        "de": "§ 17a SGB XI: Richtlinien zur Empfehlung von Pflegehilfsmitteln",
+        "en": "Section 17a SGB XI: guidelines on care aid recommendations"
+      }
+    },
+    "bfarmDipa": {
+      "url": "https://www.bfarm.de/DE/Medizinprodukte/Aufgaben/DiGA-und-DiPA/DiPA/_node.html",
+      "label": {
+        "de": "BfArM: Digitale Pflegeanwendungen (DiPA) und DiPA-Verzeichnis",
+        "en": "BfArM: digital care applications (DiPA) and the DiPA directory"
+      }
+    },
+    "fpfzg2a": {
+      "url": "https://www.gesetze-im-internet.de/fpfzg/__2a.html",
+      "label": {
+        "de": "§ 2a FPfZG: Ankündigung acht Wochen vorher",
+        "en": "Section 2a Family Care Leave Act: eight weeks’ notice"
+      }
     }
   },
   "vorversicherung": {
@@ -1092,5 +1207,22 @@
   "heimvertrag": {
     "_quelle": "§ 9 Abs. 2 WBVG",
     "erhoehung_fruehestens_wochen": 4
+  },
+  "wohngruppe_anschub": {
+    "_quelle": "§ 45g Abs. 1 und 2 SGB XI (gelesen 2026-10-13)",
+    "je_person": 2613,
+    "max_wohngruppe": 10452,
+    "max_personen": 4,
+    "antrag_frist_jahre": 1,
+    "foerdertopf_mio": 30
+  },
+  "dipa_bewilligung": {
+    "_quelle": "§ 40a Abs. 2 SGB XI (gelesen 2026-10-13)",
+    "befristung_max_monate": 6
+  },
+  "hilfsmittel_regeln": {
+    "_quelle": "§ 40 Abs. 3 und 6 SGB XI (gelesen 2026-10-13)",
+    "zuzahlung_ab_alter": 18,
+    "empfehlung_max_wochen": 2
   }
 }
