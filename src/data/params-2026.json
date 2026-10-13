@@ -1303,6 +1303,48 @@
         "de": "§ 9 SGB XI: Aufgaben der Länder, Förderung der Pflegeeinrichtungen",
         "en": "Section 9 SGB XI: duties of the states, funding of care facilities"
       }
+    },
+    "sgb11_45h": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__45h.html",
+      "label": {
+        "de": "§ 45h SGB XI: Leistungen in gemeinschaftlichen Wohnformen mit Verträgen nach § 92c",
+        "en": "Section 45h SGB XI: benefits in shared living arrangements with care contracts under section 92c"
+      }
+    },
+    "sgb11_140": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__140.html",
+      "label": {
+        "de": "§ 140 SGB XI: Überleitung in die Pflegegrade, Erhalt des übergeleiteten Grades",
+        "en": "Section 140 SGB XI: transfer into care grades, protection of the transferred grade"
+      }
+    },
+    "sgb10_24": {
+      "url": "https://www.gesetze-im-internet.de/sgb_10/__24.html",
+      "label": {
+        "de": "§ 24 SGB X: Anhörung Beteiligter",
+        "en": "Section 24 SGB X: hearing before an adverse decision"
+      }
+    },
+    "sgb6_3": {
+      "url": "https://www.gesetze-im-internet.de/sgb_6/__3.html",
+      "label": {
+        "de": "§ 3 SGB VI: Rentenversicherungspflicht nicht erwerbsmäßig tätiger Pflegepersonen",
+        "en": "Section 3 SGB VI: compulsory pension insurance for unpaid carers"
+      }
+    },
+    "sgb1_16": {
+      "url": "https://www.gesetze-im-internet.de/sgb_1/__16.html",
+      "label": {
+        "de": "§ 16 SGB I: Antragstellung, auch bei deutschen Auslandsvertretungen",
+        "en": "Section 16 SGB I: making an application, including at German missions abroad"
+      }
+    },
+    "sgb11_7": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__7.html",
+      "label": {
+        "de": "§ 7 SGB XI: Aufklärung, Auskunft, Leistungs- und Preisvergleichsliste",
+        "en": "Section 7 SGB XI: information, advice and the list comparing services and prices"
+      }
     }
   },
   "vorversicherung": {
@@ -1391,5 +1433,9 @@
       2,
       3
     ]
+  },
+  "wohnform_92c": {
+    "_quelle": "§ 45h Abs. 1 SGB XI (gelesen 2026-10-13)",
+    "zuschuss": 450
   }
 }

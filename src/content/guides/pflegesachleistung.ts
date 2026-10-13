@@ -53,9 +53,9 @@ ${h.table(['Pflegegrad', 'Sachleistung bis', 'Pflegegeld', 'Pflegegeld in Prozen
 ${h.table(['Pflegegrad', 'Rechnung', 'Topf genutzt', 'Pflegegeld daneben', 'selbst zu zahlen'],
   ([2, 3, 4, 5] as const).map((g) => { const k = r1200(g); return [String(g), h.eur(1200), h.pct(k.anteil, 1), h.eur(k.pflegegeld, 2), h.eur(k.ueberMax)]; }),
   `Beispielrechnung des Motors: Pflegedienst mit ${h.eur(1200)} Monatsrechnung (Annahme), ohne Umwandlung.`, ['l', 'r', 'r', 'r', 'r'])}
-<!--mini:kombiSchnell-->
 <p>Bei Pflegegrad 2 reißt eine solche Rechnung das Budget, bei Pflegegrad 5 bleibt fast die Hälfte frei und wird zu anteiligem Pflegegeld. Wer selbst zuzahlen muss und dafür kein ausreichendes Einkommen hat, kann beim Sozialamt die ${h.a('hilfe-zur-pflege', 'Hilfe zur Pflege')} beantragen. Vorher lohnt sich der Blick auf den Pflegevertrag: Manche Einsätze lassen sich kürzen, verlegen oder durch Tagespflege ersetzen, die aus einem eigenen Budget kommt.</p>
 
+<!--mini:kombiSchnell-->
 <h2>Der Pflegevertrag: was drinstehen muss</h2>
 <p>Spätestens mit dem ersten Einsatz entsteht zwischen Dienst und pflegebedürftiger Person ein Pflegevertrag (${h.src('sgb11_120', '§ 120 SGB XI')}). Er muss Art, Inhalt und Umfang jeder Leistung mit dem vereinbarten Preis beschreiben, und der Dienst muss vor Vertragsschluss in der Regel schriftlich mitteilen, was voraussichtlich auf die Familie zukommt. Der Vertrag lässt sich jederzeit ohne Frist kündigen. Das ist wichtig, wenn ein Dienst unzuverlässig kommt oder die Familie wechseln will: Niemand muss eine Kündigungsfrist abwarten, und die Sachleistung lässt sich ab dem Wechsel bei einem anderen Dienst einsetzen.</p>
 <p>Der Vertrag soll außerdem berücksichtigen, dass mehrere Anbieter nebeneinander tätig sein können und dass ein Teil des Budgets für den ${h.a('umwandlungsanspruch', 'Umwandlungsanspruch')} frei bleiben kann. Eine Familie darf also einen Dienst für die Morgenpflege haben und eine anerkannte Alltagshilfe für den Nachmittag, ohne dass der erste Dienst das ganze Budget beansprucht.</p>
@@ -109,9 +109,9 @@ ${h.table(['Care grade', 'Services up to', 'Care allowance', 'Allowance as share
 ${h.table(['Care grade', 'Bill', 'Budget used', 'Allowance alongside', 'you pay'],
   ([2, 3, 4, 5] as const).map((g) => { const k = r1200(g); return [String(g), h.eur(1200), h.pct(k.anteil, 1), h.eur(k.pflegegeld, 2), h.eur(k.ueberMax)]; }),
   `Engine example: a care service bill of ${h.eur(1200)} a month (assumption), no conversion.`, ['l', 'r', 'r', 'r', 'r'])}
-<!--mini:kombiSchnell-->
 <p>At grade 2 such a bill breaks the budget; at grade 5 almost half stays free and becomes partial allowance. Anyone who must top up but lacks the income can apply to the social welfare office for ${h.a('hilfe-zur-pflege', 'social assistance for care')}. Before that, look at the contract: some visits can be shortened, moved or replaced by day care, which has its own budget.</p>
 
+<!--mini:kombiSchnell-->
 <h2>The care contract and what it must contain</h2>
 <p>A care contract (Pflegevertrag) arises at the latest with the first visit (${h.src('sgb11_120', 'section 120 SGB XI')}). It must describe the type, content and extent of each service with its agreed price, and the service must normally tell you in writing beforehand what the expected private cost will be. The contract can be cancelled at any time without notice, which matters when a service is unreliable or the family wants to switch. Ask for the written cost estimate by email if you are handling things from another country; it is the document you will need if a bill is disputed.</p>
 <p>The contract should also allow for several providers working side by side and for part of the budget to stay free for the ${h.a('umwandlungsanspruch', 'conversion claim')}. A family may therefore use one agency for morning care and a recognised everyday helper for afternoons without the first agency claiming the whole budget.</p>

@@ -25,7 +25,7 @@ function Modul({ titel, kurz, offen, children }: { titel: string; kurz: string; 
   return (
     <details className="rounded-lg border border-navy-200 p-3" open={offen}>
       <summary className="cursor-pointer text-sm font-semibold text-navy-900">{titel} <span className="font-normal text-navy-600">· {kurz}</span></summary>
-      <div className="mt-4 grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2">{children}</div>
+      <div className="mt-4 grid grid-cols-1 gap-y-4">{children}</div>
     </details>
   );
 }
