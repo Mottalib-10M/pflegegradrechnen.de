@@ -1275,6 +1275,34 @@
         "de": "§ 120 SGB XI: Pflegevertrag bei häuslicher Pflege",
         "en": "Section 120 SGB XI: home care contract"
       }
+    },
+    "sgg73": {
+      "url": "https://www.gesetze-im-internet.de/sgg/__73.html",
+      "label": {
+        "de": "§ 73 SGG: Prozessvertretung, Verfahren ohne Anwalt",
+        "en": "Section 73 Social Courts Act: representation, proceedings without a lawyer"
+      }
+    },
+    "sgb1_36a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_1/__36a.html",
+      "label": {
+        "de": "§ 36a SGB I: elektronische Kommunikation und Schriftform",
+        "en": "Section 36a SGB I: electronic communication and written form"
+      }
+    },
+    "sgb11_82": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__82.html",
+      "label": {
+        "de": "§ 82 SGB XI: gesonderte Berechnung der Investitionskosten",
+        "en": "Section 82 SGB XI: separate billing of investment costs"
+      }
+    },
+    "sgb11_9": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__9.html",
+      "label": {
+        "de": "§ 9 SGB XI: Aufgaben der Länder, Förderung der Pflegeeinrichtungen",
+        "en": "Section 9 SGB XI: duties of the states, funding of care facilities"
+      }
     }
   },
   "vorversicherung": {
