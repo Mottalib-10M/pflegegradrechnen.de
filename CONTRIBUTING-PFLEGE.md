@@ -25,7 +25,7 @@ Le cœur (routes, menus, sitemap, hreflang, schémas, pied de page) lit ces fich
 | `research/` | Textes lus : SGB XI complet au 24.7.2026 (`sgb11.txt`), Anlagen, PDF vdek, volumes KP |
 
 Moteur (`src/lib/engine/`) : `nba.ts` (Pflegegrad), `leistungen.ts` (Pflegegeld, Kombination, Jahresbetrag…), `heim.ts`
-(Eigenanteil, Zuschlag, Reichweite, `kosten(land)`, `rangliste()`), `angehoerige.ts` (Rente, Pauschbetrag). Tests : `tests/engine.test.ts`.
+(Eigenanteil, Zuschlag, Reichweite, `kosten(land)`, `rangliste()`), `angehoerige.ts` (Rente, Pauschbetrag), `sozialhilfe.ts` (Barbetrag, Einkommensgrenze § 85). Tests : `tests/engine.test.ts`.
 
 Mini-simulateurs : `src/lib/minis/<kind>.ts`, chargés automatiquement ; ils appellent le moteur. Outils : `_kit.ts`.
 
@@ -71,3 +71,10 @@ Serveur local : port 4501 (`npm run preview`). Arrêt : `lsof -ti tcp:4501 | xar
 ## Ce qu'on ne fait pas
 
 Pas de dépôt GitHub, pas de push, pas de DNS. Ne toucher ni `_trame` ni la RECETTE. Aucune identité personnelle : l'éditeur est Radif Partners.
+
+## État au 2026-10-13
+
+- 51 pages de contenu (35 guides, 6 outils, 16 Länder) × 2 langues + accueil, méthode, à propos = 108 pages indexables ; pages de service en noindex.
+- `npm run check` reconstruit et enchaîne tous les contrôles ; `python3 scripts/build-llms.py` régénère `public/llms.txt` (puis rebuild).
+- Points laissés de côté faute de source lue : montant du Hausnotruf, réduction chiffrée du Pflegegeld après un Beratungseinsatz manqué, obligation du Beratungseinsatz en Kombinationsleistung, Pflegewohngeld hors NRW, montants du PNOG.
+- Pistes : pages Pflegewohngeld des autres Länder si une aide existe (sources des Länder), page « 24-Stunden-Pflege » (sans intermédiaire), étendre le Pflegegrad-Rechner aux enfants de moins de 18 mois (4.K).
