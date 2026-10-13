@@ -1,5 +1,5 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://de-pflege.example";
+export const SITE_URL = "https://pflegegradrechnen.de";
 export const SITE_NAMES: Record<string, string> = {"de": "Pflegerechnung", "en": "Pflegerechnung"};
 export const LANG_TAGS: Record<string, string> = {"de": "de-DE", "en": "en-DE"};
 export const OG_LOCALES: Record<string, string> = {"de": "de_DE", "en": "en_GB"};
@@ -17,7 +17,7 @@ export const AUTHOR_DESC: Record<string, string> = {"de": "Radif Partners rechne
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"de": ["Pflegegrad und Begutachtungsinstrument (§ 15 SGB XI)", "Leistungen der Pflegeversicherung 2026", "Eigenanteile im Pflegeheim nach Bundesland", "Soziale Sicherung pflegender Angehöriger"], "en": ["German care grades and the assessment instrument (Section 15 SGB XI)", "German long-term care insurance benefits 2026", "Care home co-payments by German state", "Pension and tax rules for family carers in Germany"]};
-export const CONTACT_EMAIL = "kontakt@de-pflege.example";
+export const CONTACT_EMAIL = "kontakt@pflegegradrechnen.de";
 export const THEME_COLOR = '#B42318';
 export const LOGO_SYMBOL = 'PG';
 export const BING_VERIFY_CODE = '';

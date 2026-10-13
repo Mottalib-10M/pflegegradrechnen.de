@@ -11,7 +11,7 @@
  "volumesNote": "Volumes ESTIMÉS (Google Trends calé sur des requêtes mesurées au KP), reports/niches-2026-10-12/estimations/de.md §1 : 0,6 à 1,25 M/mois ; GO validé par l'éditeur le 2026-10-12 sur estimations.",
  "folder": "de-pflege",
  "outDir": "a-publier/Mottalib-10M",
- "url": "https://de-pflege.example",
+ "url": "https://pflegegradrechnen.de",
  "locales": [
   "de",
   "en"
@@ -41,7 +41,7 @@
   "de": "(siehe src/data/site-config.ts)",
   "en": "(see src/data/site-config.ts)"
  },
- "email": "kontakt@de-pflege.example",
+ "email": "kontakt@pflegegradrechnen.de",
  "indexnow": "b7e14c2a9f3d4e6b8a1c5d0e2f7a9b3c",
  "shortName": "Pflegerechnung",
  "description": "Pflegegeld 2026 nach Pflegegrad, Pflegegrad aus den 64 Kriterien des Gutachtens, Verhinderungs- und Kurzzeitpflege und der Eigenanteil im Pflegeheim in jedem Bundesland.",
