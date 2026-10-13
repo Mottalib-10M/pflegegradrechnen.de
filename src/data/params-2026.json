@@ -989,5 +989,13 @@
     "3": 573,
     "4": 765,
     "5": 947
+  },
+  "pflegewohngeld_nw": {
+    "_quelle": "Verbraucherzentrale NRW, Pflegewohngeld in NRW (§ 14 APG NRW), gelesen 2026-10-13",
+    "schonbetrag": 10000,
+    "schonbetrag_paar": 15000,
+    "ab_pflegegrad": 2,
+    "deckt": "Investitionskosten",
+    "nicht_kurzzeitpflege": true
   }
 }
