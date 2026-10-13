@@ -1,0 +1,19 @@
+# Domaines des sources primaires de de-pflege (lu par check-regles.py et check-seo.py)
+
+# Bundesministerium der Justiz / juris : texte consolidé officiel du SGB XI, SGB XII, SGB V, SGB VI, EStG, PflegeZG, FPfZG, WBVG, SGG, BGB
+gesetze-im-internet.de
+
+# Bundesministerium für Gesundheit : prestations, Bekanntmachung des montants, procédure PNOG
+bundesgesundheitsministerium.de
+
+# Verband der Ersatzkassen : Eigenanteile Pflegeheim par Land (1.1 et 1.7.2026)
+vdek.com
+
+# Deutsche Rentenversicherung : Bezugsgröße, Durchschnittsentgelt, Rentenwert
+deutsche-rentenversicherung.de
+
+# Bayerisches Landesamt für Pflege : Landespflegegeld
+lfp.bayern.de
+
+# Medizinischer Dienst : Pflegebegutachtung
+medizinischerdienst.de

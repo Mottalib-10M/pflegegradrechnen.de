@@ -46,7 +46,7 @@ export interface LegalIdentity {
 }
 export const LEGAL: LegalIdentity = {
   entityName: 'Radif Partners',  // éditeur de tous les sites du portefeuille (RECETTE §8)
-  legalForm: '',  // vide : publication à titre personnel, pas de société             // ex. entreprise individuelle, SASU, GmbH, eenmanszaak
+  legalForm: '',  // vide : publication à titre personnel, pas de société (comme les autres sites du portefeuille)
   street: '49 rue du Ressort',
   postalCode: '63000',
   city: 'Clermont-Ferrand',
@@ -63,7 +63,7 @@ export const LEGAL: LegalIdentity = {
 };
 
 /** Champs sans lesquels le site ne doit pas être mis en ligne. */
-export const LEGAL_REQUIRED: Array<keyof LegalIdentity> = ['entityName', 'legalForm', 'street', 'postalCode', 'city'];
+export const LEGAL_REQUIRED: Array<keyof LegalIdentity> = ['entityName', 'street', 'postalCode', 'city'];
 
 /** Profils publics de l'auteur (schema.org sameAs). Laisser vide si aucun. */
 export const AUTHOR_SAME_AS: string[] = [];

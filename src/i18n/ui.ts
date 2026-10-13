@@ -12,7 +12,7 @@ const en: typeof de = {
   skipToContent: 'Skip to content', mainNav: 'Main navigation', breadcrumbLabel: 'Breadcrumb', breadcrumbHome: 'Home', menuOpen: 'Open menu',
   faqTitle: 'Questions families ask', relatedCalculators: 'Continue with', sourcesTitle: 'Laws and data', writtenBy: 'Written by',
   asOf: 'Amounts', lastUpdated: 'read on', footerValidated: 'vdek tables for all 16 states and the Section 15 SGB XI scoring system recalculated in tests', footerBrowser: 'Everything is calculated in your browser · nothing is stored or sent · free',
-  footerDisclaimer: 'Pflegerechnung is an independent service by Radif Partners. We are not part of any Pflegekasse, the Medical Service, any care home operator or care advice service, and we refer no one anywhere. Results are estimates based on Book XI of the Social Code and vdek averages; your Pflegekasse decides on your claim.', footerPopular: '', notFound: 'There is no page at this address.',
+  footerDisclaimer: 'Pflegerechnung is an independent service by Radif Partners. We are not part of any Pflegekasse, the Medical Service, any care home operator or care advice service, and we refer no one anywhere. Results are estimates only, based on Book XI of the Social Code and vdek averages; they do not replace the decision of your Pflegekasse or personal advice.', footerPopular: '', notFound: 'There is no page at this address.',
   readMore: 'Read more',
 };
 export function t(lang: Locale) { return lang === 'en' ? en : de; }
