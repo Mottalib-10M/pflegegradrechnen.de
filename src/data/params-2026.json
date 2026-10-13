@@ -622,7 +622,17 @@
     "kabinett": "2026-09-30",
     "sozialraumbudget_u25_monat": 300,
     "kinderlosenzuschlag_2027": 0.009,
-    "status": "Regierungsentwurf, nicht in Kraft"
+    "status": "Regierungsentwurf, nicht in Kraft",
+    "referentenentwurf": "2026-06-05",
+    "kinderlosenzuschlag_plus": 0.003,
+    "kinderlosenzuschlag_ab": "2027-01-01",
+    "bbg_plus_monat": 300,
+    "ehegattenzuschlag": 0.0052,
+    "ehegattenzuschlag_ab": "2028-01-01",
+    "dynamisierung_ab_jahr": 2029,
+    "akut_kurzzeitpflege_ab_jahr": 2028,
+    "sozialraumbudget_u25_jahr": 3600,
+    "sozialraumbudget_alter": 25
   },
   "statistik": {
     "_quelle": "BMG, Zahlen und Fakten zur Pflegeversicherung; Destatis Pflegestatistik 2023",
@@ -1174,6 +1184,97 @@
         "de": "§ 2a FPfZG: Ankündigung acht Wochen vorher",
         "en": "Section 2a Family Care Leave Act: eight weeks’ notice"
       }
+    },
+    "bmgHilfsmittel": {
+      "url": "https://www.bundesgesundheitsministerium.de/pflege-zu-hause/pflegehilfsmittel",
+      "label": {
+        "de": "BMG: Pflegehilfsmittel",
+        "en": "Federal Ministry of Health (BMG): care aids"
+      }
+    },
+    "bmgWohnung": {
+      "url": "https://www.bundesgesundheitsministerium.de/pflege-zu-hause/zuschuesse-zur-wohnungsanpassung",
+      "label": {
+        "de": "BMG: Zuschüsse zur Wohnungsanpassung",
+        "en": "Federal Ministry of Health (BMG): home adaptation grants"
+      }
+    },
+    "bmgDipa": {
+      "url": "https://www.bundesgesundheitsministerium.de/themen/pflege/online-ratgeber-pflege/leistungen-der-pflegeversicherung/leistungen-im-ueberblick/digitale-pflegeanwendungen",
+      "label": {
+        "de": "BMG: Digitale Pflegeanwendungen und ergänzende Unterstützungsleistungen",
+        "en": "Federal Ministry of Health (BMG): digital care apps and supplementary support"
+      }
+    },
+    "bmgWohngruppe": {
+      "url": "https://www.bundesgesundheitsministerium.de/themen/pflege/online-ratgeber-pflege/leistungen-der-pflegeversicherung/pflege-wohngemeinschaften-und-andere-alternative-wohnformen",
+      "label": {
+        "de": "BMG: Leistungen in ambulant betreuten Wohngruppen",
+        "en": "Federal Ministry of Health (BMG): benefits in shared care flats"
+      }
+    },
+    "sgb5_37": {
+      "url": "https://www.gesetze-im-internet.de/sgb_5/__37.html",
+      "label": {
+        "de": "§ 37 SGB V: Häusliche Krankenpflege",
+        "en": "Section 37 SGB V: home nursing care (health insurance)"
+      }
+    },
+    "sgb11_14": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__14.html",
+      "label": {
+        "de": "§ 14 SGB XI: Begriff der Pflegebedürftigkeit",
+        "en": "Section 14 SGB XI: definition of need for long-term care"
+      }
+    },
+    "sgb11_142a": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__142a.html",
+      "label": {
+        "de": "§ 142a SGB XI: telefonische Begutachtung und ihre Ausschlüsse",
+        "en": "Section 142a SGB XI: assessment by telephone and when it is excluded"
+      }
+    },
+    "sgb10_44": {
+      "url": "https://www.gesetze-im-internet.de/sgb_10/__44.html",
+      "label": {
+        "de": "§ 44 SGB X: Rücknahme eines rechtswidrigen Bescheids (Überprüfungsantrag)",
+        "en": "Section 44 SGB X: withdrawal of an unlawful decision (review request)"
+      }
+    },
+    "sgb10_25": {
+      "url": "https://www.gesetze-im-internet.de/sgb_10/__25.html",
+      "label": {
+        "de": "§ 25 SGB X: Akteneinsicht durch Beteiligte",
+        "en": "Section 25 SGB X: right to inspect the file"
+      }
+    },
+    "sgg87": {
+      "url": "https://www.gesetze-im-internet.de/sgg/__87.html",
+      "label": {
+        "de": "§ 87 SGG: Klagefrist nach dem Widerspruchsbescheid",
+        "en": "Section 87 Social Courts Act: deadline for a court action"
+      }
+    },
+    "sgg88": {
+      "url": "https://www.gesetze-im-internet.de/sgg/__88.html",
+      "label": {
+        "de": "§ 88 SGG: Untätigkeitsklage",
+        "en": "Section 88 Social Courts Act: action for failure to decide"
+      }
+    },
+    "mdRichtlinie": {
+      "url": "https://www.medizinischerdienst.de/fileadmin/MD-zentraler-Ordner/Downloads/01_Pflegebegutachtung/261007_RICHTLINIE_PFLEGE_2026_15_korrigert.pdf",
+      "label": {
+        "de": "Medizinischer Dienst Bund: Begutachtungs-Richtlinien zur Feststellung der Pflegebedürftigkeit",
+        "en": "Medizinischer Dienst Bund: assessment guidelines for establishing care needs (German)"
+      }
+    },
+    "sgb11_120": {
+      "url": "https://www.gesetze-im-internet.de/sgb_11/__120.html",
+      "label": {
+        "de": "§ 120 SGB XI: Pflegevertrag bei häuslicher Pflege",
+        "en": "Section 120 SGB XI: home care contract"
+      }
     }
   },
   "vorversicherung": {
@@ -1224,5 +1325,43 @@
     "_quelle": "§ 40 Abs. 3 und 6 SGB XI (gelesen 2026-10-13)",
     "zuzahlung_ab_alter": 18,
     "empfehlung_max_wochen": 2
+  },
+  "rechtsweg": {
+    "_quelle": "§§ 84, 87, 88 SGG; § 44 SGB X; § 18 Abs. 3 SGB XI; § 33 Abs. 1 SGB XI; Begutachtungs-Richtlinien MD Bund (Kinder, Telefoninterview)",
+    "widerspruch_ausland_monate": 3,
+    "klage_monate": 1,
+    "klage_ausland_monate": 3,
+    "untaetigkeit_widerspruch_monate": 3,
+    "ueberpruefung_rueckwirkung_jahre": 4,
+    "gutachterliste_nach_arbeitstagen": 20,
+    "gutachterliste_mindestens": 3,
+    "gutachterwahl_wochen": 1,
+    "befristung_max_jahre": 3,
+    "kinder_erwachsenenmassstab_ab_jahren": 11,
+    "telefon_hoeherstufung_ab_jahren": 14,
+    "begutachtung_dauer_bis_stunden": 1
+  },
+  "dipa_erweiterung": {
+    "_quelle": "BMG, Digitale Pflegeanwendungen (Stand 14.09.2026, gelesen 2026-10-13); § 40a Abs. 1a SGB XI",
+    "angehoerigen_apps_ab": "2026-07-01"
+  },
+  "nba_skalen": {
+    "_quelle": "Anlage 1 zu § 15 SGB XI (Modul 3 Häufigkeiten; Modul 1, 2, 4, 6 vierstufige Skala)",
+    "m3_punkte": {
+      "nie": 0,
+      "selten": 1,
+      "haeufig": 3,
+      "taeglich": 5
+    },
+    "m3_selten_mal_in_zwei_wochen": [
+      1,
+      3
+    ],
+    "skala_punkte": [
+      0,
+      1,
+      2,
+      3
+    ]
   }
 }
