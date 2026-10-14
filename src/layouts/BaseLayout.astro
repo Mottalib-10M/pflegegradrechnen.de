@@ -125,7 +125,7 @@ const otherLocales = LOCALES.filter((l) => l !== lang);
           dans le premier écran (RECETTE §5, règle du 2026-10-11). */}
       {(breadcrumbs.length > 0 || Astro.slots.has('kopfzeile')) && (
         <div class="mx-auto max-w-6xl px-4 pt-4">
-          <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-navy-100 pb-3">
+          <div class={`flex flex-wrap items-baseline gap-x-6 gap-y-1 ${breadcrumbs.length > 0 ? 'justify-between border-b border-navy-100 pb-3' : 'justify-end'}`}>
             {breadcrumbs.length > 0 && (
               <nav aria-label={ui.breadcrumbLabel}>
                 <ol class="flex flex-wrap items-center gap-1 text-sm text-navy-600">
