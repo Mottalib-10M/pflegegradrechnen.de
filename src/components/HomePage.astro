@@ -14,9 +14,8 @@ import { label } from '../i18n/nav';
 import { helpers } from '../lib/helpers';
 import { P, type SourceKey } from '../lib/engine/params';
 import { kosten, rangliste, LAND_NAME } from '../lib/engine/heim';
-import { formatMoney, displayDate } from '../lib/format';
+import { formatMoney } from '../lib/format';
 import { faqSchema, organizationSchema, websiteSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
-import { LAST_UPDATED, LANG_TAGS } from '../data/site-config';
 import { PAGES } from '../lib/guides';
 interface Props { lang: Locale }
 const { lang } = Astro.props;
@@ -55,7 +54,8 @@ const landSeite = (code: string) => PAGES.find((p) => p.group === 'land' && (p.t
     <h1 class="mt-1 text-3xl font-bold text-navy-900 md:text-[2.5rem] md:leading-tight">{x.h1}</h1>
     <p class="mt-2 text-lg text-navy-700">{x.intro}</p>
     <p class="mt-2 text-sm text-navy-700">
-      {de ? 'Nachgelesen am' : 'Checked on'} <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, LANG_TAGS[lang])}</time> · <a class="underline" href={route('method', lang)}>{label('method', lang)}</a> · <a class="underline" href={route('about', lang)}>{label('about', lang)}</a>
+      {/* Pas de date au-dessus du simulateur : elle est en bas de page (RECETTE §8.4). */}
+      <a class="underline" href={route('method', lang)}>{label('method', lang)}</a> · <a class="underline" href={route('about', lang)}>{label('about', lang)}</a>
     </p>
   </header>
   <section id="rechner" data-outil aria-label={de ? 'Leistungsrechner' : 'Benefits calculator'}>
