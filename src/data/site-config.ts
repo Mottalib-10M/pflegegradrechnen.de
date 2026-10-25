@@ -1,6 +1,8 @@
 /** Configuration centrale du site (générée par new-site.py). */
 export const SITE_URL = "https://pflegegradrechnen.de";
-export const SITE_NAMES: Record<string, string> = {"de": "Pflegerechnung", "en": "Pflegerechnung"};
+// Partie du nom en couleur dans l'en-tete ('' = aucune).
+export const BRAND_ACCENT = 'Rechnen';
+export const SITE_NAMES: Record<string, string> = {"de": "Pflegegrad Rechnen", "en": "Pflegegrad Rechnen"};
 export const LANG_TAGS: Record<string, string> = {"de": "de-DE", "en": "en-DE"};
 export const OG_LOCALES: Record<string, string> = {"de": "de_DE", "en": "en_GB"};
 export const LOCALE_TAG = 'de-DE';

@@ -12,7 +12,7 @@ for f in sorted(glob.glob('dist/*/**/index.html', recursive=True)):
     t = html.unescape(re.search(r'<title>(.*?)</title>', d, re.S).group(1))
     m = re.search(r'name="description" content="(.*?)"', d, re.S)
     rows[lang].append((path, t, html.unescape(m.group(1)) if m else ''))
-out = ['# Pflegerechnung', '',
+out = ['# Pflegegrad Rechnen', '',
        '> Unabhängige Seite von Radif Partners auf Deutsch und Englisch zur deutschen Pflegeversicherung 2026: Pflegegrad aus allen 64 Kriterien der Anlage 1 zu § 15 SGB XI geschätzt, Pflegegeld, Sachleistung, Kombinationsleistung, Entlastungsbetrag, Gemeinsamer Jahresbetrag für Verhinderungs- und Kurzzeitpflege, Eigenanteil im Pflegeheim für alle 16 Bundesländer nach den vdek-Daten vom 1. Januar und 1. Juli 2026 mit Leistungszuschlag nach § 43c, Hilfe zur Pflege, Rente und Steuer für pflegende Angehörige. Der Entwurf des Pflegeneuordnungsgesetzes (Kabinett 30.09.2026) wird beschrieben, aber nicht gerechnet.', '',
        'Alle Berechnungen laufen im Browser; keine Datenerhebung, keine Telefonnummer, keine Vermittlung. Ergebnisse sind Schätzungen; über Leistungen entscheidet die Pflegekasse.', '']
 for lang, titel in (('de', '## Seiten auf Deutsch'), ('en', '## Pages in English')):

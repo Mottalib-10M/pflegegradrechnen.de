@@ -1,4 +1,4 @@
-# Pflegerechnung
+# Pflegegrad Rechnen
 
 > Unabhängige Seite von Radif Partners auf Deutsch und Englisch zur deutschen Pflegeversicherung 2026: Pflegegrad aus allen 64 Kriterien der Anlage 1 zu § 15 SGB XI geschätzt, Pflegegeld, Sachleistung, Kombinationsleistung, Entlastungsbetrag, Gemeinsamer Jahresbetrag für Verhinderungs- und Kurzzeitpflege, Eigenanteil im Pflegeheim für alle 16 Bundesländer nach den vdek-Daten vom 1. Januar und 1. Juli 2026 mit Leistungszuschlag nach § 43c, Hilfe zur Pflege, Rente und Steuer für pflegende Angehörige. Der Entwurf des Pflegeneuordnungsgesetzes (Kabinett 30.09.2026) wird beschrieben, aber nicht gerechnet.
 
@@ -54,7 +54,7 @@ Alle Berechnungen laufen im Browser; keine Datenerhebung, keine Telefonnummer, k
 - [Pflegezeit 2026: Freistellung, Lohnersatz, Kündigungsschutz](https://pflegegradrechnen.de/de/pflegezeit/): Pflegezeit 2026: 10 Arbeitstage mit Pflegeunterstützungsgeld, bis 6 Monate Pflegezeit, 24 Monate Familienpflegezeit, zinsloses Darlehen und Kündigungsschutz.
 - [Rente für pflegende Angehörige 2026: Punkte je Pflegejahr](https://pflegegradrechnen.de/de/rente-pflegende-angehoerige/): Rente für pflegende Angehörige 2026: Rentenbeiträge auf 18,9 bis 100 % der Bezugsgröße von 3.955 €, bis 0,91 Rentenpunkte pro Pflegejahr. Mit Rechner.
 - [Tagespflege 2026: eigenes Budget, Fahrdienst, Eigenanteil](https://pflegegradrechnen.de/de/tagespflege/): Tagespflege 2026: 721 € bis 2.085 € im Monat zusätzlich zum Pflegegeld, Fahrt inklusive. Wie viele Tage der Topf trägt, was der Entlastungsbetrag zahlt.
-- [Pflegerechnung: wer die Pflegerechner herausgibt und prüft](https://pflegegradrechnen.de/de/ueber-uns/): Wer hinter den Rechnern zu Pflegegrad, Pflegegeld, Verhinderungspflege und Heimkosten steht, warum es sie gibt, wie geprüft wird, woran sie nichts verdienen.
+- [Pflegegrad Rechnen: wer hinter den Pflegerechnern steht](https://pflegegradrechnen.de/de/ueber-uns/): Wer hinter den Rechnern zu Pflegegrad, Pflegegeld, Verhinderungspflege und Heimkosten steht, warum es sie gibt, wie geprüft wird, woran sie nichts verdienen.
 - [Umwandlungsanspruch 2026: 40 % Sachleistung für Alltagshilfe](https://pflegegradrechnen.de/de/umwandlungsanspruch/): Umwandlungsanspruch 2026: bis 40 % der Pflegesachleistung für Alltagshilfen ab Pflegegrad 2, ohne Antrag, neben dem Entlastungsbetrag. Pflegegeld sinkt.
 - [Verhinderungspflege 2026: 3.539 € Jahresbetrag planen](https://pflegegradrechnen.de/de/verhinderungspflege/): Verhinderungspflege 2026: gemeinsamer Jahresbetrag 3.539 € mit der Kurzzeitpflege, Angehörige bis 2 × Pflegegeld, halbes Pflegegeld läuft weiter. Mit Rechner.
 - [Widerspruch Pflegegrad 2026: Frist, Begründung, Muster](https://pflegegradrechnen.de/de/widerspruch-pflegegrad/): Widerspruch gegen den Pflegegrad 2026: 1 Monat Frist ab Bescheid, Begründung aus dem Gutachten, neues Gutachten, kostenfreie Klage und mögliche Nachzahlung.
@@ -63,7 +63,7 @@ Alle Berechnungen laufen im Browser; keine Datenerhebung, keine Telefonnummer, k
 
 ## Pages in English
 
-- [Pflegerechnung: Who Builds and Checks These Care Tools](https://pflegegradrechnen.de/en/about/): Who is behind the German care grade, care allowance, respite and care home cost calculators, why they exist, how they are tested, what they never earn from.
+- [Pflegegrad Rechnen: Who Builds and Checks These Care Tools](https://pflegegradrechnen.de/en/about/): Who is behind the German care grade, care allowance, respite and care home cost calculators, why they exist, how they are tested, what they never earn from.
 - [Pflegegrad beantragen 2026: Applying for a German Care Grade](https://pflegegradrechnen.de/en/applying-for-a-care-grade/): Applying for a German care grade in 2026: informal request to the Pflegekasse, benefits from that month, decision in 25 working days or 70 euros a week.
 - [Pflegehilfsmittel 2026: Care Aids, Monthly Allowance, Beds](https://pflegegradrechnen.de/en/care-aids/): German care aids (Pflegehilfsmittel) 2026: up to €42 a month for consumables, technical aids mostly on loan, 10 % co-payment capped at €25. Deadlines.
 - [Pflegegeld 2026: German Care Allowance Rules and Table](https://pflegegradrechnen.de/en/care-allowance/): German care allowance (Pflegegeld) table 2026: 347 to 990 euros a month, and when it is paid, cut or continued: part months, hospital, respite, abroad, tax.

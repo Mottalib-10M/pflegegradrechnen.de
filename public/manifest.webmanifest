@@ -1,6 +1,6 @@
 {
- "name": "Pflegerechnung",
- "short_name": "Pflegerechnung",
+ "name": "Pflegegrad Rechnen",
+ "short_name": "Pflegegrad Rechnen",
  "description": "Pflegegeld 2026 nach Pflegegrad, Pflegegrad aus den 64 Kriterien des Gutachtens, Verhinderungs- und Kurzzeitpflege und der Eigenanteil im Pflegeheim in jedem Bundesland.",
  "start_url": "/de/",
  "display": "standalone",
